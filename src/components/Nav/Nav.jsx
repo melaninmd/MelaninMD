@@ -8,24 +8,24 @@ import FormData from 'form-data';
 
 function Nav() {
   const dispatch = useDispatch();
-  // const [image, setImage] = useState();
+  const [image, setImage] = useState();
   const user = useSelector((store) => store.user);
 
 
   const handleFile = (event) =>{
     event.preventDefault();
-    const image = event.target.files[0];
-
-    console.log('our image =>>', image);
-    dispatch({type: 'GET_CONDITION', payload: {image: image}});
+    setImage(event.target.files[0]);
     
-
   }
 
-  // useEffect(()=>{
-  //   console.log('IMAGE!!!', image)
-  //   dispatch({type: 'GET_CONDITION', payload: {image: image}});
-  // }, [image]);
+  useEffect(()=>{
+    if(image){
+      console.log(image);
+      dispatch({type: 'GET_CONDITION', payload: {image: image}});
+      setImage(null);
+    }
+    
+  }, [image]);
 
   return (
     <div className="nav">
