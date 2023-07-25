@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const conditionRouter = require('./routes/condition.router');
+
 
 const expressUploader = require("express-fileupload");
 
@@ -15,6 +15,7 @@ const passport = require('./strategies/user.strategy');
 
 // Route includes
 const userRouter = require('./routes/user.router');
+const conditionRouter = require('./routes/condition.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -32,7 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-const conditionRouter = require("./routes/condition.router")
+
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/condition', conditionRouter);

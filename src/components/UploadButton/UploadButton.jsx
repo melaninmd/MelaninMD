@@ -14,11 +14,12 @@ const ImageFileInput = ({ imageSrc, altText, onFileChange }) => (
     <input
       type="file"
       accept="image/*"
+      name='image'
       style={{
         opacity: 0,
         position: 'absolute',
-        width: '20px',
-        height: '20px'
+        width: '100%',
+        height: '100%'
       }}
       onChange={onFileChange}
       aria-label={altText}

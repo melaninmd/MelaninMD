@@ -11,8 +11,13 @@ router.post('/',  (req, res) => {
     const apiKey = 'ozS9KvL9ENroNSCpWhsY3dxtyIDhqu1iWf2HDIjrHhA';
     const imageUrl = 'https://assets.nhs.uk/nhsuk-cms/images/S_0917_acne_M1080444.max-600x600.jpg';
 
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(400).send('No files were uploaded.');
+    }
+
     // make sure image key is also on front end code.
     const uploadedFile = req.files?.image;
+    
     
    
           axios({
@@ -39,7 +44,7 @@ router.post('/',  (req, res) => {
                 console.log(response.data);
                 res.send(response.data);
             }).catch((error) => {
-                console.error(error);
+                console.error('prolemas =>',error);
                 if (error.response) {
                     console.error(`Response data =>>>>>>> ${error.response.data}`);
                     console.error(`Response status $$$$$$$$$ ${error.response.status}`);
@@ -49,6 +54,8 @@ router.post('/',  (req, res) => {
         
         });
         })
+
+        
    
 
 
