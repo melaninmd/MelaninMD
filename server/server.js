@@ -18,8 +18,6 @@ const userRouter = require('./routes/user.router');
 
 const conditionRouter = require ('./routes/condition.router')
 
-const conditionRouter = require('./routes/condition.router');
-
 
 const historyRouter = require('./routes/history.router');
 
