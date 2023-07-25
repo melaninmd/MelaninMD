@@ -17,7 +17,7 @@ import QuizPage from '../QuizPage/QuizPage';
 import UserPage from '../UserPage/UserPage';
 import HistoryPage from '../HistoryPage/HistoryPage';
 import LandingPage from '../LandingPage/LandingPage';
-import LoginPage from '../LoginPage/LoginPage';
+
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
