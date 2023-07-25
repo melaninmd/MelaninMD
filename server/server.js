@@ -15,16 +15,11 @@ const passport = require('./strategies/user.strategy');
 
 // Route includes
 const userRouter = require('./routes/user.router');
-<<<<<<< HEAD
-const conditionRouter = require ('./routes/condition.router')
-=======
 const conditionRouter = require('./routes/condition.router');
 
 
 const historyRouter = require('./routes/history.router');
 
-
->>>>>>> 0fa59008b58199a05019af232ca258abcebddaff
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
