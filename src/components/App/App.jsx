@@ -18,7 +18,6 @@ import UserPage from '../UserPage/UserPage';
 import HistoryPage from '../HistoryPage/HistoryPage';
 import LandingPage from '../LandingPage/LandingPage';
 
-import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
 
@@ -40,6 +39,7 @@ function App() {
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
+          
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
@@ -80,7 +80,7 @@ function App() {
               <Redirect to="/about" />
               :
               // Otherwise, show the login page
-              <LoginPage />
+              <LandingPage />
             }
           </Route>
 
@@ -94,7 +94,7 @@ function App() {
               <Redirect to="/about" />
               :
               // Otherwise, show the registration page
-              <RegisterPage />
+              <LandingPage />
             }
           </Route>
 
@@ -105,7 +105,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/about" />
               :
               // Otherwise, show the Landing page
               <LandingPage />

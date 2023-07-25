@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import UploadButton from '../UploadButton/UploadButton';
+import FormData from 'form-data';
 
 function Nav() {
+  const dispatch = useDispatch();
+  // const [image, setImage] = useState();
   const user = useSelector((store) => store.user);
+
+
+  const handleFile = (event) =>{
+    event.preventDefault();
+    const image = event.target.files[0];
+
+    console.log('our image =>>', image);
+    dispatch({type: 'GET_CONDITION', payload: {image: image}});
+    
+
+  }
+
+  // useEffect(()=>{
+  //   console.log('IMAGE!!!', image)
+  //   dispatch({type: 'GET_CONDITION', payload: {image: image}});
+  // }, [image]);
 
   return (
     <div className="nav">
@@ -23,7 +43,11 @@ function Nav() {
               Quiz
             </Link>
             
-            {/* insert the upload link */}
+            <UploadButton
+            imageSrc='https://clipart-library.com/newimages/clip-art-camera-22.png'
+            altText = 'upload photo'
+            onFileChange={handleFile}
+            />
 
             <Link className="navLink" to="/history">
               History
