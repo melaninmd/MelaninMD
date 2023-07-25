@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+
+const conditionRouter = require('./routes/condition.router');
+
 const expressUploader = require("express-fileupload");
+
 
 
 const app = express();
