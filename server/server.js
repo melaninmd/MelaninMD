@@ -1,7 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+
 const conditionRouter = require('./routes/condition.router');
+
+const expressUploader = require("express-fileupload");
+
+
+
 const app = express();
 
 const sessionMiddleware = require('./modules/session-middleware');
@@ -14,6 +20,10 @@ const userRouter = require('./routes/user.router');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Express file uploader middleware
+app.use(expressUploader());
+
+
 // Passport Session Configuration //
 app.use(sessionMiddleware);
 
@@ -21,6 +31,8 @@ app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+const conditionRouter = require("./routes/condition.router")
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/condition', conditionRouter);
