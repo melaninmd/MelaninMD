@@ -5,12 +5,14 @@ import './Nav.css';
 import { useDispatch, useSelector } from 'react-redux';
 import UploadButton from '../UploadButton/UploadButton';
 import FormData from 'form-data';
+import { useHistory } from 'react-router-dom';
+
 
 function Nav() {
   const dispatch = useDispatch();
   const [image, setImage] = useState();
   const user = useSelector((store) => store.user);
-
+  const history = useHistory(); 
 
   const handleFile = (event) =>{
     event.preventDefault();
@@ -23,6 +25,8 @@ function Nav() {
       console.log(image);
       dispatch({type: 'GET_CONDITION', payload: {image: image}});
       setImage(null);
+    // Navigate to the prediction page after image is uploaded and processed
+      history.push('/prediction');
     }
     
   }, [image]);
