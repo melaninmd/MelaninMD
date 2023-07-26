@@ -4,7 +4,7 @@ import FormData from 'form-data';
 
 function* fetchCondition(action) {
     try {
-        console.log("fetching conditions and url from the database, bongo", action.payload)
+     //   console.log("fetching conditions and url from the database, bongo", action.payload)
 
 
         const formData = new FormData();
