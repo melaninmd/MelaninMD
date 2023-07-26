@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import HistoryItem from '../HistoryItem/HistoryItem';
 
 // This is one of our simplest components
 // It doesn't have local state
@@ -6,9 +8,22 @@ import React from 'react';
 // or even care what the redux state is
 
 function InfoPage() {
+  const dispatch = useDispatch();
+  const history = useSelector(store => store.historyReducer);
+
+  useEffect(()=>{
+    dispatch({type: 'FETCH_HISTORY'})
+  }, [])
+
   return (
     <div className="container">
       <p>User History Page</p>
+      {history ?(
+        history.data?.map((item, i)=> <HistoryItem key={i} item={item}/>)
+
+      ): (
+        <p>No history to display</p>
+      )}
     </div>
   );
 }
