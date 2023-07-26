@@ -15,12 +15,14 @@ let diagnosisId;
 router.post('/',  (req, res) => {
     const apiUrl = "https://autoderm.firstderm.com/v1/query";
 
+
     // const imageUrl = 'https://assets.nhs.uk/nhsuk-cms/images/S_0917_acne_M1080444.max-600x600.jpg';
 
 
     if (!req.files || Object.keys(req.files).length === 0) {
         return res.status(400).send('No files were uploaded.');
     }
+
 
     // make sure image key is also on front end code.
     const uploadedFile = req.files?.image;
