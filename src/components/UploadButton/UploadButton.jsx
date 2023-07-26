@@ -4,10 +4,10 @@ const ImageFileInput = ({ imageSrc, altText, onFileChange }) => (
   <div
     style={{
       position: 'relative',
-      width: '20px', // adjust width and height to fit your image
-      height: '20px',
+      width: '40px', 
+      height: '40px',
       background: `url(${imageSrc}) no-repeat center center`,
-      backgroundSize: 'cover', // to make sure image cover the whole input
+      backgroundSize: 'cover', // to make sure image covers the whole input
       cursor: 'pointer'
     }}
   >
