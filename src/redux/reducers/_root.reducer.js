@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import errors from './errors.reducer';
 import user from './user.reducer';
-import conditionReducer from './condtion.reducer';
+import conditionReducer from './condition.reducer';
 import historyReducer from './history.reducer';
 
 // rootReducer is the primary reducer for our entire project

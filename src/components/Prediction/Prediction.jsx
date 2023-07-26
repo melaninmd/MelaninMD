@@ -18,7 +18,7 @@ function DiagnosisResult() {
     return(
         <>
         <p>Result</p>
-        {conditionReducer.map((condition, i) => {
+        {conditionReducer?.map((condition, i) => {
             return(
                 <div>
                     <img>{condition.prediction.url}</img>
