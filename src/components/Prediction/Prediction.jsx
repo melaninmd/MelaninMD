@@ -15,10 +15,12 @@ function DiagnosisResult() {
         <p>Result</p>
         {conditionReducer.map((condition, i) => {
             return(
-                // <img></img>
-
-               <p>{condition.prediction.name}</p> ,
-               <p>{condition.prediction.readMoreUrl}</p> 
+                <div>
+                    <img>{condition.prediction.url}</img>
+                    <p>{condition.prediction.name}</p> 
+                    <p>{condition.prediction.readMoreUrl}</p> 
+                </div>
+               
                
 
             )
