@@ -1,0 +1,9 @@
+.diagnosisContainer{
+    height: 200px;
+    overflow: scroll;
+    width: 200px;
+    margin-left: 40px;
+}
+.diagnosisPic{
+    height: 100px;
+}

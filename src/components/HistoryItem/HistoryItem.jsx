@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-
+import './HistoryItem.css';
 
 
 function HistoryItem(props){
@@ -12,8 +12,9 @@ function HistoryItem(props){
     }
 
     return(
-        <div>
-            {pictureArray.map((picture, i) => <img key={i} src={picture}/>)}
+        <div className="diagnosisContainer">
+            <p>{props.item.prediction_name.map(name=> name + " ")}</p>
+            {pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture}/>)}
             
 
         </div>
