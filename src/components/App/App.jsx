@@ -17,6 +17,7 @@ import QuizPage from '../QuizPage/QuizPage';
 import UserPage from '../UserPage/UserPage';
 import HistoryPage from '../HistoryPage/HistoryPage';
 import LandingPage from '../LandingPage/LandingPage';
+import Prediction from '../Prediction/Prediction'
 
 
 import './App.css';
@@ -113,6 +114,10 @@ function App() {
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
+          <Route
+          exact path="/prediction">
+            <Prediction/>
+          </Route>
           <Route>
             <h1>404</h1>
           </Route>
