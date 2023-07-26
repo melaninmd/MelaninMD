@@ -12,7 +12,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
+import BarChart from '../BarChart/BarChart';
 import QuizPage from '../QuizPage/QuizPage';
 import UserPage from '../UserPage/UserPage';
 import HistoryPage from '../HistoryPage/HistoryPage';
@@ -21,6 +21,7 @@ import Prediction from '../Prediction/Prediction'
 
 
 import './App.css';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -69,6 +70,14 @@ function App() {
             path="/history"
           >
             <HistoryPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/barchart"
+          >
+            <BarChart/>
           </ProtectedRoute>
 
           <Route
