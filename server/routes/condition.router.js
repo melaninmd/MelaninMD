@@ -27,7 +27,7 @@ router.post('/',  (req, res) => {
     
     
     //FILESTACK DOES NOT ACCEPT JPEG
-    const apiKey2 = process.env.API_KEY2;
+    const apiKey2 = process.env.API_KEY;
 
           axios({
             method: "POST",
