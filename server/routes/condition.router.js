@@ -10,26 +10,6 @@ const pool = require('../modules/pool');
 
 
 
-const insertIntoDiagnosis = async (client, userId) => {
-    const queryText = 'INSERT INTO diagnosis (user_id) VALUES ($1) RETURNING id';
-    const values = [userId];
-    const res = await client.query(queryText, values);
-    return res.rows[0].id;
-}
-
-const insertIntoPictures = async (client, diagnosisId, displayUrl, date) => {
-    const queryText = 'INSERT INTO pictures (diagnosis_id, filepath, date) VALUES ($1, $2, $3)';
-    const values = [diagnosisId, displayUrl, date];
-    await client.query(queryText, values);
-}
-
-const insertIntoPrediction = async (client, diagnosisId, prediction) => {
-    const queryText = `INSERT INTO prediction (diagnosis_id, prediction, icd, classification_id, link, confidence)
-                       VALUES ($1, $2, $3, $4, $5, $6)`;
-    const values = [diagnosisId, prediction.name, prediction.icd, prediction.classificationId, prediction.readMoreUrl, prediction.confidence];
-    await client.query(queryText, values);
-}
-
 router.post('/',  (req, res) => {
     const apiUrl = "https://autoderm.firstderm.com/v1/query";
 
