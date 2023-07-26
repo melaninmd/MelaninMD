@@ -2,7 +2,7 @@ import axios from 'axios';
 import {put, takeLatest} from  'redux-saga/effects';
 
 
-function* fetchHstory() {
+function* fetchHistory() {
     try {
         const history = yield axios.get('/history')
         console.log('get ll the diagnosis history', history.data);
@@ -13,8 +13,8 @@ function* fetchHstory() {
     }
 }
 
-function historyPostSaga() {
-    yield takeLatest('FETCH_HISTORY', fetchHstory);
+function* historyPostSaga() {
+    yield takeLatest('FETCH_HISTORY', fetchHistory);
     
 }
 
