@@ -8,7 +8,7 @@ const stream = require('stream').Readable;
 
 router.post('/',  (req, res) => {
     const apiUrl = "https://autoderm.firstderm.com/v1/query";
-    const apiKey = 'ozS9KvL9ENroNSCpWhsY3dxtyIDhqu1iWf2HDIjrHhA';
+    const apiKey = 'xjCTbPniVBZDixNd743r6KUgzvBQwNL-FVK3th3PZUQ';
     const imageUrl = 'https://assets.nhs.uk/nhsuk-cms/images/S_0917_acne_M1080444.max-600x600.jpg';
 
     // make sure image key is also on front end code.

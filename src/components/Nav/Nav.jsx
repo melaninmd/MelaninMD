@@ -31,7 +31,7 @@ function Nav() {
             <Link className="navLink" to="/quiz">
               Quiz
             </Link>
-            
+
             <UploadButton
             imageSrc='https://clipart-library.com/newimages/clip-art-camera-22.png'
             altText = 'upload photo'
