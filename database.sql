@@ -23,8 +23,8 @@ CREATE TABLE "prediction" (
 	"id" SERIAL PRIMARY KEY,
 	"diagnosis_id" INT NOT NULL REFERENCES "diagnosis",
 	"prediction" VARCHAR NOT NULL,
-	"icd" INT,
-	"classification_id" INT,
+	"icd" VARCHAR,
+	"classification_id" VARCHAR,
 	"link" VARCHAR,
-	"confidence" INT
+	"confidence" DOUBLE PRECISION
 );

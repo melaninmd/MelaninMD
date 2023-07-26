@@ -21,7 +21,17 @@ function UserPage() {
       </div>
       <div>
         <h1>App Usage</h1>
-        <p>text here</p>
+        <b>1. Capture or Upload Image</b>
+        <ul>   Click on the camera logo on navigation bar to either take a new image of your skin condition using your device's camera or upload an existing image from your gallery.</ul>
+        <b>2. View and Condition Prediction</b>
+        <ul>   Once image been captured, you will be directed to the "Condition Prediction" page.  </ul>
+        <ul>   On directed page you will be provided with four possible diagnoses based on the uploaded image</ul>
+        <ul>   User can learn more about the each condition by clicking the read more button and get directed to a website with more information and treatment </ul>
+        <ul>   If you wish to keep track of your condition you can do so by clicking the save button</ul>
+        <b>3. Accessing Account History</b>
+        <ul>   In the "History" ta  you will see a list of all the previously saved images of your skin conditions.</ul>
+        <ul>   User can Click on the "Upload" button to add more images to keep track of their condition.</ul>
+        <ul>   User can also click  "Delete" button or icon associated with that particular condition to remove it from your history.</ul>
       </div>
     </div>
   );

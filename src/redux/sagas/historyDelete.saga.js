@@ -8,7 +8,7 @@ function* deleteCondition(action) {
     try {
         console.log("action.payload is>>>>", action.payload);
 //Making Delete request to remove conditions from history
-yield axios.delete(`/history/ ${action.payload}`);
+yield axios.delete(`/history/diagnosis/${action.payload}`);
 //Dispatching action to get updated history after deleting condition 
 yield put({ type: "GET_CONDITION"});
 
@@ -19,4 +19,4 @@ yield put({ type: "GET_CONDITION"});
 function* historyDeleteSaga() {
     yield takeLatest("DELETE_HISTORY", deleteCondition)
 }
-export default historyDeleteSaga
+export default historyDeleteSaga;
