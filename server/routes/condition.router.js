@@ -8,6 +8,8 @@ const stream = require('stream').Readable;
 const pool = require('../modules/pool');
 
 
+//setting up the diagnosis ID outside of everything so that it can be changed as needed
+let diagnosisId;
 
 
 router.post('/',  (req, res) => {
@@ -55,18 +57,20 @@ router.post('/',  (req, res) => {
                 console.log(response.data);
                 const resp = {url: displayUrl, predictions: response.data.predictions}
                 const predictions = response.data.predictions;
-                let diagnosisId;
+                
 
                 let queryText = 'INSERT INTO diagnosis (user_id) VALUES ($1) RETURNING id';
                 let values = [req.user.id];
                 pool.query(queryText, values)
                     .then(response =>{
+                        console.log('insert into diagnosis WORKS! ',response.rows)
                         diagnosisId = response.rows[0].id;
                         queryText = 'INSERT INTO pictures (diagnosis_id, filepath, date) VALUES ($1, $2, $3)';
                         values = [diagnosisId, displayUrl, date];
                         pool.query(queryText, values)
                             .then(response2=>{
-                                console.log(response2);
+
+                                console.log('insert into pictures works!',response2);
                                 for (let prediction of predictions){
                                     queryText = `INSERT INTO prediction (diagnosis_id, prediction, icd, classification_id, link, confidence)
                                                 VALUES ($1, $2, $3, $4, $5, $6)`
@@ -74,7 +78,7 @@ router.post('/',  (req, res) => {
                                     pool.query(queryText, values)
                                 }
                             }).then(response3=>{
-                                console.log(response3);
+                                console.log('all DB queries worked!', response3);
                                 res.send(resp)
 
                             })
