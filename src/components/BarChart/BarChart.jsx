@@ -26,13 +26,14 @@ ChartJS.register(
 );
 
 function BarChart() {
+	
 	const data = {
 		labels: ["Rosacea", "Dermatitis", "Acne", "Eczema"], // Horizontal axis labels (predictions)
 		datasets: [
 			{
 				label: "Chart", // Label for the dataset
 				data: [40, 50, 60, 70], // Vertical axis values (confidence percentages)
-				backgroundColor: ["green", "blue", "red", "yellow"], // Colors for the bars
+				backgroundColor: ["green", "blue", "brown", "yellow"], // Colors for the bars
 				borderColor: "black", // Border color for the bars
 			},
 		],

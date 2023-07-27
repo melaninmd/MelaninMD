@@ -14,7 +14,7 @@ function* fetchCondition(action) {
 
         const conditionResponse = yield axios.post(`/condition/`, formData, {headers});
         console.log("action payload is>>>>>", action.payload);
-        //Dispatching action to set the retrived condition and image url into the condition reducer 
+        //Dispatching action to set the retrieved condition and image url into the condition reducer 
         yield put ({ type: "SET_CONDITION", payload: conditionResponse.data});
         console.log("conditionResponse.data is >>>>>", conditionResponse.data)
     } catch (error) {
