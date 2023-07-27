@@ -14,7 +14,9 @@ function HistoryItem(props){
     return(
         <div className="diagnosisContainer">
             <p>{props.item.prediction_name.map(name=> name + " ")}</p>
+            <button>arrow</button>
             {pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture}/>)}
+            
             <button>Delete</button>
             <button>Upload</button>
             
@@ -25,3 +27,4 @@ function HistoryItem(props){
 }
 
 export default HistoryItem;
+

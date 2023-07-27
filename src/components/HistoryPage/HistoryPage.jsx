@@ -19,13 +19,19 @@ function InfoPage() {
     <div className="container">
       <p>User History Page</p>
       {history ?(
-        history.data?.map((item, i)=> <HistoryItem key={i} item={item}/>)
+        history.data?.map((item, i)=>  <HistoryItem key={i} item={item}/> )
+        
 
       ): (
         <p>No history to display</p>
       )}
+      
     </div>
   );
 }
 
 export default InfoPage;
+
+
+
+
