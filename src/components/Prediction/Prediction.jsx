@@ -21,7 +21,7 @@ function DiagnosisResult() {
         {conditionReducer?.map((condition, i) => {
             return(
                 <div>
-                    <img>{condition.prediction.url}</img>
+                    <img src={condition.prediction.url}/>
                     <p>{condition.prediction.name}</p> 
                     <p>{condition.prediction.readMoreUrl}</p> 
                     <div>
