@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import UploadButton from '../UploadButton/UploadButton';
 import FormData from 'form-data';
 import { useHistory } from 'react-router-dom';
-
+import HistoryIcon from '@mui/icons-material/History';
+import QuizIcon from '@mui/icons-material/Quiz';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 function Nav() {
   const dispatch = useDispatch();
@@ -44,17 +46,17 @@ function Nav() {
             </Link>
 
             <Link className="navLink" to="/quiz">
-              Quiz
+              <QuizIcon />
             </Link>
 
-            <UploadButton
-            imageSrc='https://clipart-library.com/newimages/clip-art-camera-22.png'
-            altText = 'upload photo'
-            onFileChange={handleFile}
-            />
+            <UploadButton altText = 'upload photo'
+            onFileChange={handleFile}/>
+            
+            
+          
 
             <Link className="navLink" to="/history">
-              History
+              <HistoryIcon />
             </Link>
 
             <Link className="navLink" to="/barchart">
