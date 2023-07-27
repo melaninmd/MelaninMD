@@ -27,6 +27,8 @@
 
 }
 
+
+
 button {
     border-radius: 8px;
     flex-basis: 80px; 
@@ -34,13 +36,16 @@ button {
 }
 
 .data-container:nth-child(odd) {
-    background-color: antiquewhite;
+    background-color: #75a6ce;
+    color: rgb(255, 255, 255);
 }
 
 .data-container:nth-child(even) {
-    background-color: burlywood;
+    background-color: #195382;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
     margin-left: 8%;
+    color: #195382;
 }
