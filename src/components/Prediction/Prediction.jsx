@@ -5,33 +5,18 @@ function DiagnosisResult() {
     const dispatch = useDispatch();
     const conditionReducer = useSelector((store) => store.conditionReducer);
 
-    useEffect(() => {
-        //load the diagnosis result on page load
-        dispatch({ type: "GET_CONDITION"})
-    }, []);
-
-    //Dispatching action to add condition to history
-    const addToHistory = (condition) => {
-        dispatch({ type: "FETCH_HISTORY", payload: condition})
-    }
 
     return(
         <>
         <p>Result</p>
-        {conditionReducer?.map((condition, i) => {
+        <img src={conditionReducer.url}/>
+        {conditionReducer.predictions?.map((condition, i) => {
             return(
                 <div>
-                    <img src={condition.prediction.url}/>
-                    <p>{condition.prediction.name}</p> 
-                    <p>{condition.prediction.readMoreUrl}</p> 
-                    <div>
-                        <button
-                        onClick={() => addToHistory(condition)}
-                        type= "button"
-                        > save
-
-                        </button>
-                    </div>
+                   
+                    <p>{condition.name}</p> 
+                    <p>{condition.readMoreUrl}</p> 
+                    
                 </div>
                
                
