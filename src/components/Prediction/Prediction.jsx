@@ -19,7 +19,7 @@ function DiagnosisResult() {
         {conditionReducer.predictions?.map((condition, i) => {
             return(
                 <div className="data-container">
-                    <p>{condition.name}</p> 
+                    <b>{condition.name}</b> 
                     <button onClick={()=> readMore(condition)}>Read More</button> 
                    
                     {/* <p>{condition.confidence}</p> */}
@@ -31,7 +31,7 @@ function DiagnosisResult() {
            
         })}
         <div className="data-container">
-        <p>acne</p>
+        <p>Acne</p>
         <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
 
