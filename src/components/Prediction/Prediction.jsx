@@ -5,10 +5,10 @@ function DiagnosisResult() {
     const dispatch = useDispatch();
     const conditionReducer = useSelector((store) => store.conditionReducer);
 
-    useEffect(() => {
-        //load the diagnosis result on page load
-        dispatch({ type: "GET_CONDITION"})
-    }, []);
+    // useEffect(() => {
+    //     //load the diagnosis result on page load
+    //     dispatch({ type: "GET_CONDITION"})
+    // }, []);
 
     //Dispatching action to add condition to history
     const addToHistory = (condition) => {
