@@ -71,15 +71,7 @@ function App() {
           >
             <HistoryPage />
           </ProtectedRoute>
-
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/barchart"
-          >
-            <BarChart/>
-          </ProtectedRoute>
-
+          
           <Route
             exact
             path="/login"
