@@ -72,13 +72,13 @@ function App() {
             <HistoryPage />
           </ProtectedRoute>
 
-          {/* <ProtectedRoute
+          <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
             path="/barchart"
           >
             <BarChart/>
-          </ProtectedRoute> */}
+          </ProtectedRoute>
 
           <Route
             exact

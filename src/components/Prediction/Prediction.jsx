@@ -1,42 +1,107 @@
-import { Bar } from 'react-chartjs-2';
-import { useSelector } from 'react-redux';
+import { Bar } from "react-chartjs-2";
+import { useSelector } from "react-redux";
+
+import {
+	Chart as ChartJS,
+	CategoryScale,
+	LinearScale,
+	BarElement,
+	Title,
+	Tooltip,
+	Legend,
+} from "chart.js";
+
+// Register necessary chart elements and plugins
+ChartJS.register(
+	CategoryScale,
+	LinearScale,
+	BarElement,
+	Title,
+	Tooltip,
+	Legend
+);
 
 function DiagnosisResult() {
-  const conditionReducer = useSelector((store) => store.conditionReducer);
+	const conditionReducer = useSelector((store) => store.conditionReducer);
 
-  const generateChartData = () => {
-    const labels = conditionReducer.predictions?.map((condition) => condition.name) || [];
-    const data = conditionReducer.predictions?.map((condition) => condition.confidence) || [];
+// Define options for the chart
+	const options = {
+		scales: {
+			y: {        // y axis
+				beginAtZero: true,
+				title: {
+					display: true,
+					text: "Confidence (%)",
+				},
+				ticks: {
+					callback: function (value) {
+						return value + "%";
+					},
+				},
+			},
+			x: {    //x axis
+				title: {
+					display: true,
+					text: "Predictions",
+				},
+			},
+		},
+	};
+    
+  // Generate chart data based on conditionReducer
+	const generateChartData = () => {
+		const labels =
+			conditionReducer.predictions?.map((condition) => condition.name) || [];
+		const data =
+			conditionReducer.predictions?.map(
+				(condition) => condition.confidence * 100
+			) || [];
 
-    return {
-      labels: labels,
-      datasets: [
-        {
-          label: 'Confidence',
-          data: data,
-          backgroundColor: ["green", "blue", "red", "yellow", "orange", "purple", "pink"], // Customize the bar color here
-        },
-      ],
-    };
-  };
+		return {
+			labels: labels,
+			datasets: [
+				{
+					label: "Bar Chart",
+					data: data,
+					backgroundColor: [
+						"green",
+						"blue",
+						"red",
+						"yellow",
+						"orange",
+						"purple",
+						"pink",
+					], // Customize the bar color here
+				},
+			],
+		};
+	};
 
-  return (
-    <>
-      <div>
-        <p>Result</p>
-        <img src={conditionReducer.url} alt="Condition Image" />
-        {conditionReducer.predictions?.map((condition, i) => (
-          <div key={i}>
-            <p>{condition.name}</p>
-            <p>{condition.readMoreUrl}</p>
-          </div>
-        ))}
-      </div>
-      <div style={{ height: '300px', width: '400px' }}>
-        <Bar data={generateChartData()} />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div>
+				<p>Result</p>
+				<img src={conditionReducer.url} alt="Condition Image" />
+				{conditionReducer.predictions?.map((condition, i) => (
+					<div key={i}>
+						<p>{condition.name}</p>
+						<p>{condition.readMoreUrl}</p>
+					</div>
+				))}
+			</div>
+			<div
+				style={{
+					padding: "10px",
+					width: "30%",
+					height: "40%",
+					textAlign: "center",
+					margin: "auto 0",
+				}}
+			>
+				<Bar data={generateChartData()} options={options} />
+			</div>
+		</>
+	);
 }
 
 export default DiagnosisResult;
