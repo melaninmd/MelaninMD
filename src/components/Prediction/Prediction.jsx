@@ -1,9 +1,7 @@
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import './Prediction.css'
+import './Prediction.css';
 import { Bar } from "react-chartjs-2";
-
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -33,9 +31,6 @@ function DiagnosisResult() {
         window.location.href = condition.readMoreUrl;
 
 
-    }
-
-    // Define options for the chart
 	const options = {
 		scales: {
 			y: {        // y axis
@@ -108,12 +103,12 @@ function DiagnosisResult() {
            
         })}
         <div className="data-container">
-        <b className="condition-name">Acne</b>
-        <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <b className="condition-name">Acne</b>
+          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div className="data-container">
-        <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-        <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
+          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div
 				style={{
@@ -130,7 +125,6 @@ function DiagnosisResult() {
         </>
     )
 
-
-
+            }
 }
 export default DiagnosisResult
