@@ -1,6 +1,8 @@
-import { Bar } from "react-chartjs-2";
-import { useSelector } from "react-redux";
 
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import './Prediction.css';
+import { Bar } from "react-chartjs-2";
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -21,10 +23,17 @@ ChartJS.register(
 	Legend
 );
 
-function DiagnosisResult() {
-	const conditionReducer = useSelector((store) => store.conditionReducer);
 
-// Define options for the chart
+function DiagnosisResult() {
+    const dispatch = useDispatch();
+    const conditionReducer = useSelector((store) => store.conditionReducer);
+   
+    function readMore (condition) {
+        window.location.href = condition.readMoreUrl;
+
+
+    }
+  // Define options for the chart
 	const options = {
 		scales: {
 			y: {        // y axis
@@ -77,19 +86,34 @@ function DiagnosisResult() {
 		};
 	};
 
-	return (
-		<>
-			<div>
-				<p>Result</p>
-				<img src={conditionReducer.url} alt="Condition Image" />
-				{conditionReducer.predictions?.map((condition, i) => (
-					<div key={i}>
-						<p>{condition.name}</p>
-						<p>{condition.readMoreUrl}</p>
-					</div>
-				))}
-			</div>
-			<div
+
+    return(
+        <>
+        <h2>Result</h2>
+        <img className="image-container" src={conditionReducer.url}/>
+        {conditionReducer.predictions?.map((condition, i) => {
+            return(
+                <div className="data-container">
+                    <b className="condition-name">{condition.name}</b> 
+                    <button onClick={()=> readMore(condition)}>Read More</button> 
+                   
+                    {/* <p>{condition.confidence}</p> */}
+                </div>
+               
+               
+
+            )
+           
+        })}
+        <div className="data-container">
+          <b className="condition-name">Acne</b>
+          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+        </div>
+        <div className="data-container">
+          <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
+          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+        </div>
+        <div
 				style={{
 					padding: "10px",
 					width: "30%",
@@ -100,8 +124,9 @@ function DiagnosisResult() {
 			>
 				<Bar data={generateChartData()} options={options} />
 			</div>
-		</>
-	);
-}
 
-export default DiagnosisResult;
+        </>
+    )
+
+}
+export default DiagnosisResult

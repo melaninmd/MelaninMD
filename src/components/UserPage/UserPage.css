@@ -1,0 +1,35 @@
+.mission-container {
+    background-color: #195382;
+    border-radius: 10px;
+    color: white;
+}
+
+p{
+    padding-left: 15px;
+    padding-right: 15px;
+   padding-bottom: 15px;
+}
+
+h1{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.usage-container {
+    background-color:#75a6ce;
+    border-radius: 10px;
+    color: white;
+}
+
+b{
+    
+    padding-left: 15px;
+    padding-right: 15px;
+   padding-bottom: 15px;
+}
+
+ul{
+    padding-left: 15px;
+    padding-right: 15px;
+   padding-bottom: 15px;
+}

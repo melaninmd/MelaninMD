@@ -3,17 +3,49 @@
     height: 200px;
     padding-left: 20px;
     padding-bottom: 30px;
+    border-radius: 10px;
+    margin-left: 5%;
 }
+
 .data-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-around; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
     flex-wrap: wrap;
     background-color: antiquewhite;
     border-radius: 8px;
     margin-right: 8%;
     margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px; 
 }
+
+.condition-name {
+    flex-grow: 1; 
+    margin-right: 5px; 
+
+}
+
+
+
 button {
     border-radius: 8px;
+    flex-basis: 80px; 
+    width: 100px;
+}
+
+.data-container:nth-child(odd) {
+    background-color: #75a6ce;
+    color: rgb(255, 255, 255);
+}
+
+.data-container:nth-child(even) {
+    background-color: #195382;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    margin-left: 8%;
+    color: #195382;
 }

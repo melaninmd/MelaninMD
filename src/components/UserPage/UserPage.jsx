@@ -1,13 +1,14 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
+import './UserPage.css'
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   return (
     <div className="container">
-      <div>
+      <div className='mission-container'>
         <h1>Mission</h1>
         <p>MelaninMD provides a transformative and inclusive healthcare experience for all individuals, 
           with a special focus on catering to the diverse spectrum of skin tones, including darker skin tones. 
@@ -19,7 +20,7 @@ function UserPage() {
             we stand dedicated to promoting the well-being and self-assurance of all individuals, regardless of their skin tone. 
             MelaninMD: Your Skin, Your Health, Our Commitment.</p>
       </div>
-      <div>
+      <div className='usage-container'>
         <h1>App Usage</h1>
         <b>1. Capture or Upload Image</b>
         <ul>   Click on the camera logo on navigation bar to either take a new image of your skin condition using your device's camera or upload an existing image from your gallery.</ul>
