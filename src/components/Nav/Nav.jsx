@@ -57,9 +57,9 @@ function Nav() {
               History
             </Link>
 
-            <Link className="navLink" to="/barchart">
+            {/* <Link className="navLink" to="/barchart">
              Bar
-            </Link>
+            </Link> */}
 
             <LogOutButton className="navLink" />
           </>
