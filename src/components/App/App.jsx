@@ -12,7 +12,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import BarChart from '../BarChart/BarChart';
+
 import QuizPage from '../QuizPage/QuizPage';
 import UserPage from '../UserPage/UserPage';
 import HistoryPage from '../HistoryPage/HistoryPage';
@@ -71,7 +71,7 @@ function App() {
           >
             <HistoryPage />
           </ProtectedRoute>
-          
+
           <Route
             exact
             path="/login"
