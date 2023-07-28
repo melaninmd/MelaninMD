@@ -1,6 +1,4 @@
-.nav {
-  
-}
+
 
 .nav-logo {
   display: flex; /* Use flexbox to arrange icons/links side by side */
@@ -15,9 +13,7 @@
   position: fixed;
 }
 
-.navLink {
-  
-}
+
 
 .history-logo,
 .about-logo,
@@ -36,9 +32,7 @@
   padding-left: 10px;
 }
 
-.about-logo {
- 
-}
+
 
 .camera-logo {
 
@@ -48,9 +42,8 @@
 }
 
 
-.quiz-logo {
- 
-}
+
+
 
 .exit-logo {
 background-color: #195382;

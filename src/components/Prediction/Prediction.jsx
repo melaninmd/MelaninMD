@@ -29,7 +29,7 @@ function DiagnosisResult() {
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
-
+}
 
 	const options = {
 		scales: {
@@ -53,7 +53,7 @@ function DiagnosisResult() {
 			},
 		},
 	};
-
+	
   // Generate chart data based on conditionReducer
 	const generateChartData = () => {
 		const labels =
@@ -126,5 +126,5 @@ function DiagnosisResult() {
     )
 
             }
-}
-export default DiagnosisResult
+
+export default DiagnosisResult;

@@ -39,7 +39,7 @@ function HistoryItem(props) {
                 <button type='button' onClick={() => deleteFn(props.item.diagnosis_id)}>Delete</button>
             <button>Upload</button> </> }
                 
-        
+        </button>
             
 
            
