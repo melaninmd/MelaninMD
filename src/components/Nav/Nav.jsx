@@ -10,6 +10,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
+
 function Nav() {
   const dispatch = useDispatch();
   const [image, setImage] = useState();
