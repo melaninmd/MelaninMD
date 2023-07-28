@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './Prediction.css';
@@ -32,8 +31,6 @@ function DiagnosisResult() {
         window.location.href = condition.readMoreUrl;
 
 
-    }
-  // Define options for the chart
 	const options = {
 		scales: {
 			y: {        // y axis
@@ -128,5 +125,6 @@ function DiagnosisResult() {
         </>
     )
 
+            }
 }
 export default DiagnosisResult
