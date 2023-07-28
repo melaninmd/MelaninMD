@@ -53,7 +53,7 @@ function DiagnosisResult() {
 			},
 		},
 	};
-    
+
   // Generate chart data based on conditionReducer
 	const generateChartData = () => {
 		const labels =
@@ -114,7 +114,7 @@ function DiagnosisResult() {
 				style={{
 					padding: "10px",
 					width: "30%",
-					height: "40%",
+					height: "80%",
 					textAlign: "center",
 					margin: "auto 0",
 				}}
