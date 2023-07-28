@@ -10,7 +10,7 @@ function* deleteCondition(action) {
 //Making Delete request to remove conditions from history
 yield axios.delete(`/history/diagnosis/${action.payload}`);
 //Dispatching action to get updated history after deleting condition 
-yield put({ type: "GET_CONDITION"});
+yield put({ type: "FETCH_HISTORY"});
 
     } catch (error) {
         console.log("error deleting conditions from the history", error);

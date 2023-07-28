@@ -24,7 +24,7 @@ function HistoryItem(props) {
     return (
         <div className="diagnosisContainer">
 
-            <button className="arrow-btn" onClick={handleArrow}>
+            <button className="arrow-btn" onClick={handleArrow}/>
                 
                 Prediction: {props.item.prediction_name.map(name => name + " ")}
 
