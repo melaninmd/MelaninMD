@@ -2,7 +2,7 @@
   /* flex box layout */
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items:baseline;
 
   /* margin: 0 0 30px; */
   width: 100%;
