@@ -24,7 +24,7 @@ ChartJS.register(
 );
 
 
-function DiagnosisResult() {
+function Prediction() {
     const dispatch = useDispatch();
     const conditionReducer = useSelector((store) => store.conditionReducer);
    
@@ -90,6 +90,8 @@ function DiagnosisResult() {
     return(
         <>
         <h2>Result</h2>
+
+		{conditionReducer? (<>
         <img className="image-container" src={conditionReducer.url}/>
         {conditionReducer.predictions?.map((condition, i) => {
             return(
@@ -124,9 +126,10 @@ function DiagnosisResult() {
 			>
 				<Bar data={generateChartData()} options={options} />
 			</div>
-
+		</>): <p>loading....</p>}
         </>
     )
 
+
 }
-export default DiagnosisResult
+export default Prediction;
