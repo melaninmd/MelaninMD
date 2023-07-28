@@ -37,7 +37,7 @@ router.get('/get', (req, res) => {
 
 router.delete('/diagnosis/:id', (req, res)=>{
   const conditionIdToDelete = req.params.id;
-  const queryText = `DELETE FROM diagnosis Where id = $1`;
+  const queryText = `DELETE FROM diagnosis WHERE id = $1`;
 
   pool.query(queryText, [conditionIdToDelete])
     .then(response=>{

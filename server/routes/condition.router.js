@@ -26,6 +26,7 @@ router.post('/',  (req, res) => {
 
     // make sure image key is also on front end code.
     const uploadedFile = req.files?.image;
+    console.log('outthewazoo',uploadedFile);
     
     
     //FILESTACK DOES NOT ACCEPT JPEG
