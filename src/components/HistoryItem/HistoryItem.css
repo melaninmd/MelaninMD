@@ -2,10 +2,13 @@
     height: 200px;
     overflow-x: scroll; /* or overflow-x: auto; */
     
+    
    
     width: 400px;
     margin-left: 40px;
+   
 }
+
 .diagnosisPic{
     height: 100px;
 }

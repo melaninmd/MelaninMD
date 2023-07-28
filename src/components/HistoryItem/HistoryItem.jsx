@@ -31,15 +31,22 @@ function HistoryItem(props) {
                 <div className="prediction-names">
                 <div className="arrow"></div>
                 </div>
+                
+               
+                {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
+            {showHistory &&  <>
+                <button type='button' onClick={() => deleteFn(props.item.diagnosis_id)}>Delete</button>
+            <button>Upload</button> </> }
+                
+         
+
+     
             
             </button>
 
            
+        
          
-            {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
-            {showHistory &&  <>
-                <button type='button' onClick={() => deleteFn(props.item.diagnosis_id)}>Delete</button>
-            <button>Upload</button> </> }
             
         </div>
     );
