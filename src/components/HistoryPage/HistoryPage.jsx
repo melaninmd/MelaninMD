@@ -10,6 +10,7 @@ import './HistoryPage.css'
 function InfoPage() {
   const dispatch = useDispatch();
   const history = useSelector(store => store.historyReducer);
+  const user = useSelector(store => store.user);
 
   useEffect(()=>{
     dispatch({type: 'FETCH_HISTORY'})
@@ -17,7 +18,7 @@ function InfoPage() {
 
   return (
     <div className="container">
-      <p>User History Page</p>
+      <h2>{user.username}'s history</h2>
       {history ?(
         history.data?.map((item, i)=>  <HistoryItem key={i} item={item}/> )
         

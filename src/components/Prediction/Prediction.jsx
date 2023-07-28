@@ -92,7 +92,7 @@ function DiagnosisResult() {
             return(
                 <div className="data-container">
                     <b className="condition-name">{condition.name}</b> 
-                    <button onClick={()=> readMore(condition)}>Read More</button> 
+                    <button  className="p-btn" onClick={()=> readMore(condition)}>Read More</button> 
                    
                     {/* <p>{condition.confidence}</p> */}
                 </div>
@@ -104,11 +104,11 @@ function DiagnosisResult() {
         })}
         <div className="data-container">
           <b className="condition-name">Acne</b>
-          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <button className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div className="data-container">
           <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div
 				style={{

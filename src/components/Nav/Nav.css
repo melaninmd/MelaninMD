@@ -1,49 +1,63 @@
 .nav {
-  /* flex box layout */
-  display: flex;
-  justify-content: space-around;
-  align-items:baseline;
+  
+}
 
-  /* margin: 0 0 30px; */
+.nav-logo {
+  display: flex; /* Use flexbox to arrange icons/links side by side */
+  justify-content: space-between; /* Distribute items with equal space between them */
+  align-items: center; /* Center items vertically within the container */
   width: 100%;
   height: 80px;
   background-color: #195382;
-  /* overflow:; */
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
   z-index: 5;
   position: fixed;
 }
 
-.nav a {
-  text-decoration: none;
-}
-
-.nav-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #f2f2f2;
-  padding-left: 10px;
-  margin: 0;
-}
-
 .navLink {
-  display: inline-block;
-  color: #f2f2f2;
-  background-color: #195382;
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-  font-size: 15px;
-
-  /* these last two make the logout button in
-  the nav bar look like another link */
-  border: none;
-  cursor: pointer;
-  outline: 0;
-  flex: 1 1 auto;
+  
 }
+
+.history-logo,
+.about-logo,
+.camera-logo,
+.quiz-logo,
+.exit-logo {
+
+  flex: 1; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.history-logo {
+  padding-left: 10px;
+}
+
+.about-logo {
+ 
+}
+
+.camera-logo {
+
+  padding-top: 3%;
+  
+  
+}
+
+
+.quiz-logo {
+ 
+}
+
+.exit-logo {
+background-color: #195382;
+}
+
 
 /* .navLink:hover {
   background-color: #008183;
 } */
+

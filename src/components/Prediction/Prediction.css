@@ -29,7 +29,7 @@
 
 
 
-button {
+.p-btn {
     border-radius: 8px;
     flex-basis: 80px; 
     width: 100px;
