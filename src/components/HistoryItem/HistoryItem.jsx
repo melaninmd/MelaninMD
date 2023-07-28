@@ -2,10 +2,11 @@ import { useSelector, useDispatch } from "react-redux";
 import './HistoryItem.css';
 import { useState } from "react";
 
-
-function HistoryItem(props){
+function HistoryItem(props) {
     const dispatch = useDispatch();
+    const [showHistory, setShowHistory] = useState(false);
     const history = useSelector(store => store.historyReducer);
+
 
     let pictureArray=[];
     for(let pic of history.link){
@@ -13,12 +14,14 @@ function HistoryItem(props){
             pic.picture_link.forEach(element => {
                 pictureArray.push(element)
             });
+
         }
     }
 
-    const deleteFn = (id)=>{
-        dispatch({type: 'DELETE_HISTORY', payload: id})
+    const deleteFn = (id) => {
+        dispatch({ type: 'DELETE_HISTORY', payload: id });
     }
+
 
     const uploadFn = (event, id) =>{
         const image = event.target.files[0];
@@ -32,19 +35,42 @@ function HistoryItem(props){
 
     
 
-    return(
+    const handleArrow = () => {
+        setShowHistory(!showHistory); 
+    }
+
+
+    return (
         <div className="diagnosisContainer">
-            <p>{props.item.prediction_name.map(name=> name + " ")}</p>
-            {pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture}/>)}
-            <form>
+
+
+            <button className="arrow-btn" onClick={handleArrow}/>
+                
+                Prediction: {props.item.prediction_name.map(name => name + " ")}
+
+               
+                <div className="prediction-names">
+                <div className="arrow"></div>
+                </div>
+                
+               
+                {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
+            {showHistory &&  <>
+                <form>
                 <button type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
                 <input name = 'photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
-            </form>
+            </form> }
+                
+        
+            
 
+
+           
+        
+         
+            
         </div>
-
-    )
+    );
 }
 
 export default HistoryItem;
-

@@ -10,6 +10,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
+
 function Nav() {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
@@ -27,31 +28,34 @@ function Nav() {
 
   return (
     <div className="nav">
-      <div>
+      <div className='nav-logo'>
 
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>
             
-            <Link className="navLink" to="/about">
+            <Link className="navLink about-logo" to="/about">
               About
             </Link>
 
-            <Link className="navLink" to="/quiz">
+            <Link className="navLink quiz-logo" to="/quiz">
               <QuizIcon />
             </Link>
 
-            <UploadButton altText = 'upload photo'
+            <div className='camera-logo'>
+            <UploadButton  altText = 'upload photo'
             onFileChange={handleFile}/>
+            </div>
+            
             
             
           
 
-            <Link className="navLink" to="/history">
+            <Link className="navLink history-logo" to="/history">
               <HistoryIcon />
             </Link>
 
-            <LogOutButton className="navLink" />
+            <LogOutButton className="navLink exit-logo" />
           </>
         )}
 

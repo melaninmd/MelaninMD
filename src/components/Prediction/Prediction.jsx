@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './Prediction.css';
@@ -30,17 +29,15 @@ function Prediction() {
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
-
-
     }
-  // Define options for the chart
+
 	const options = {
 		scales: {
 			y: {        // y axis
 				beginAtZero: true,
 				title: {
 					display: true,
-					text: "Confidence (%)",
+					// text: "Confidence (%)",
 				},
 				ticks: {
 					callback: function (value) {
@@ -51,7 +48,7 @@ function Prediction() {
 			x: {    //x axis
 				title: {
 					display: true,
-					text: "Predictions",
+					// text: "Predictions",
 				},
 			},
 		},
@@ -83,6 +80,7 @@ function Prediction() {
 					], // Customize the bar color here
 				},
 			],
+            borderRadius: 25,
 		};
 	};
 
@@ -97,7 +95,7 @@ function Prediction() {
             return(
                 <div className="data-container">
                     <b className="condition-name">{condition.name}</b> 
-                    <button onClick={()=> readMore(condition)}>Read More</button> 
+                    <button  className="p-btn" onClick={()=> readMore(condition)}>Read More</button> 
                    
                     {/* <p>{condition.confidence}</p> */}
                 </div>
@@ -109,21 +107,13 @@ function Prediction() {
         })}
         <div className="data-container">
           <b className="condition-name">Acne</b>
-          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <button className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div className="data-container">
           <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-          <button src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
-        <div
-				style={{
-					padding: "10px",
-					width: "30%",
-					height: "80%",
-					textAlign: "center",
-					margin: "auto 0",
-				}}
-			>
+        <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>
 		</>): <p>loading....</p>}
