@@ -34,7 +34,7 @@ function Nav() {
   }, [image]);
 
   return (
-    <div className="nav">
+    
       <div className='nav-logo'>
 
         {/* If a user is logged in, show these links */}
@@ -68,7 +68,7 @@ function Nav() {
 
         
       </div>
-    </div>
+   
   );
 }
 

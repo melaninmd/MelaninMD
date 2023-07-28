@@ -1,5 +1,5 @@
 .nav {
-  
+
 }
 
 .nav-logo {
@@ -16,7 +16,7 @@
 }
 
 .navLink {
-  
+
 }
 
 .history-logo,
@@ -25,10 +25,10 @@
 .quiz-logo,
 .exit-logo {
 
-  flex: 1; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -37,18 +37,18 @@
 }
 
 .about-logo {
- 
+
 }
 
 .camera-logo {
 
   padding-top: 3%;
-  
-  
+
+
 }
 
 .quiz-logo {
- 
+
 }
 
 .exit-logo {

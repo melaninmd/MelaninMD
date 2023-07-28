@@ -19,6 +19,8 @@
     margin-top: 5%;
     margin-bottom: 5%;
     padding: 10px; 
+    justify-content: flex-end;
+    
 }
 
 .condition-name {
@@ -33,6 +35,7 @@
     border-radius: 8px;
     flex-basis: 80px; 
     width: 100px;
+   
 }
 
 .data-container:nth-child(odd) {

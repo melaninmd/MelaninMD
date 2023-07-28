@@ -29,6 +29,7 @@ function DiagnosisResult() {
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
+	}
 
 
 	const options = {
@@ -87,6 +88,7 @@ function DiagnosisResult() {
     return(
         <>
         <h2>Result</h2>
+		{conditionReducer? (<>
         <img className="image-container" src={conditionReducer.url}/>
         {conditionReducer.predictions?.map((condition, i) => {
             return(
@@ -121,10 +123,11 @@ function DiagnosisResult() {
 			>
 				<Bar data={generateChartData()} options={options} />
 			</div>
+			</>): <p>loading....</p>}
 
         </>
     )
 
-            }
-}
+	}
+
 export default DiagnosisResult
