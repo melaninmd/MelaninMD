@@ -23,12 +23,13 @@ ChartJS.register(
 );
 
 
-function DiagnosisResult() {
+function Prediction() {
     const dispatch = useDispatch();
     const conditionReducer = useSelector((store) => store.conditionReducer);
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
+
 }
 
 	const options = {
@@ -37,7 +38,7 @@ function DiagnosisResult() {
 				beginAtZero: true,
 				title: {
 					display: true,
-					text: "Confidence (%)",
+					// text: "Confidence (%)",
 				},
 				ticks: {
 					callback: function (value) {
@@ -48,7 +49,7 @@ function DiagnosisResult() {
 			x: {    //x axis
 				title: {
 					display: true,
-					text: "Predictions",
+					// text: "Predictions",
 				},
 			},
 		},
@@ -80,6 +81,7 @@ function DiagnosisResult() {
 					], // Customize the bar color here
 				},
 			],
+            borderRadius: 25,
 		};
 	};
 
@@ -87,6 +89,8 @@ function DiagnosisResult() {
     return(
         <>
         <h2>Result</h2>
+
+		{conditionReducer? (<>
         <img className="image-container" src={conditionReducer.url}/>
         {conditionReducer.predictions?.map((condition, i) => {
             return(
@@ -110,21 +114,15 @@ function DiagnosisResult() {
           <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
           <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
-        <div
-				style={{
-					padding: "10px",
-					width: "30%",
-					height: "80%",
-					textAlign: "center",
-					margin: "auto 0",
-				}}
-			>
+        <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>
-
+		</>): <p>loading....</p>}
         </>
     )
 
-            }
 
-export default DiagnosisResult;
+
+}
+export default Prediction;
+

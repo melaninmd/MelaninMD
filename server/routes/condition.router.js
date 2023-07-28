@@ -8,6 +8,7 @@ const stream = require('stream').Readable;
 const pool = require('../modules/pool');
 
 
+
 //setting up the diagnosis ID outside of everything so that it can be changed as needed
 let diagnosisId;
 
@@ -23,7 +24,9 @@ router.post('/',  (req, res) => {
         return res.status(400).send('No files were uploaded.');
     }
 
+    const imageBuffer = req.files.image.data;
 
+    
     // make sure image key is also on front end code.
     const uploadedFile = req.files?.image;
     console.log('outthewazoo',uploadedFile);
@@ -35,7 +38,7 @@ router.post('/',  (req, res) => {
           axios({
             method: "POST",
             url: "https://www.filestackapi.com/api/store/S3?key=AkaVe8je9Thm6pWTbRcNwz",
-            data: uploadedFile?.data,
+            data: imageBuffer,
             headers: {
                 "Content-Type": "image/*"
             }
