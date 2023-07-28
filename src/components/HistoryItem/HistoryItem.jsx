@@ -61,7 +61,7 @@ function HistoryItem(props) {
                 <input name = 'photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
             </form> }
                 
-        
+        </button>
             
 
 

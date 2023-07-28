@@ -29,7 +29,8 @@ function Prediction() {
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
-    }
+
+}
 
 	const options = {
 		scales: {
@@ -53,7 +54,7 @@ function Prediction() {
 			},
 		},
 	};
-
+	
   // Generate chart data based on conditionReducer
 	const generateChartData = () => {
 		const labels =
@@ -121,5 +122,7 @@ function Prediction() {
     )
 
 
+
 }
 export default Prediction;
+
