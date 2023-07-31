@@ -10,6 +10,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import imageQuiz from '../Nav/quiz.png'
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Nav() {
   const dispatch = useDispatch();
@@ -64,7 +65,7 @@ function Nav() {
               <HistoryIcon />
             </Link>
             <div className=" navLink exit-logo">
-            <LogOutButton />
+            <LogoutIcon />
             </div>
           </>
         )}
