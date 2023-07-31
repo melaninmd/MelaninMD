@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './Prediction.css';
 import { Bar } from "react-chartjs-2";
@@ -22,10 +23,13 @@ ChartJS.register(
 	Legend
 );
 
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Prediction() {
     const dispatch = useDispatch();
     const conditionReducer = useSelector((store) => store.conditionReducer);
+	const [open, setOpen] = useState(false);
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
@@ -88,12 +92,10 @@ function Prediction() {
 
     return(
         <>
-        <h2>Result</h2>
-
-		{conditionReducer? (<>
+		{conditionReducer.predictions ? ( <>
         <img className="image-container" src={conditionReducer.url}/>
-        {conditionReducer.predictions?.map((condition, i) => {
-            return(
+        {conditionReducer.predictions?.map((condition, i) => (
+            
                 <div className="data-container">
                     <b className="condition-name">{condition.name}</b> 
                     <button  className="p-btn" onClick={()=> readMore(condition)}>Read More</button> 
@@ -103,21 +105,25 @@ function Prediction() {
                
                
 
-            )
+            
            
-        })}
+        ))}
         <div className="data-container">
-          <b className="condition-name">Acne</b>
-          <button className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
+          
         </div>
         <div className="data-container">
-          <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-          <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
         </div>
         <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>
-		</>): <p>loading....</p>}
+		</>) :  <Backdrop
+
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={!conditionReducer.predictions}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+	  }
         </>
     )
 
