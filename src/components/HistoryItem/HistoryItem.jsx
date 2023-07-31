@@ -44,10 +44,10 @@ function HistoryItem(props) {
         <div className="diagnosisContainer">
 
 
-            <button className="arrow-btn" onClick={handleArrow}/>
+            <button className="arrow-btn" onClick={handleArrow}>
                 
                 Prediction: {props.item.prediction_name.map(name => name + " ")}
-
+ </button>
                
                 <div className="prediction-names">
                 <div className="arrow"></div>
@@ -59,9 +59,9 @@ function HistoryItem(props) {
                 <form>
                 <button type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
                 <input name = 'photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
-            </form> }
+            </form> </>}
                 
-        </button>
+       
             
 
 
