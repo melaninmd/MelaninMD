@@ -22,13 +22,16 @@ function LandingPage() {
     <div className="container">
       
 
+
+
       <div className="grid landing-box">
        
         <div className="grid-col grid-col_9 register-login-box">
+
         {!registered ? (
           <RegisterForm />
         ):(
-          <LoginForm/>
+          <LoginForm />
         )}
 
           <center>
