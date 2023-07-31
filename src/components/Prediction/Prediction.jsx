@@ -109,11 +109,7 @@ function Prediction() {
            
 
         ))}
-        <div className="data-container">
-          
-        </div>
-        <div className="data-container">
-        </div>
+
 
         <div className="bar">
 				<Bar data={generateChartData()} options={options} />
