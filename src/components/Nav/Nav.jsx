@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import imageQuiz from '../Nav/quiz.png'
 
 function Nav() {
   const dispatch = useDispatch();
@@ -46,12 +47,13 @@ function Nav() {
             </Link>
 
             <Link className="navLink quiz-logo" to="/quiz">
-              <QuizIcon />
+              <QuizIcon sx={{color: "white"}}/>
             </Link>
 
             <div className='camera-logo'>
             <UploadButton  altText = 'upload photo'
-            onFileChange={handleFile}/>
+           
+            onFileChange={handleFile}  sx={{color: "white"}}/>
             </div>
             
             
@@ -61,8 +63,8 @@ function Nav() {
             <Link className="navLink history-logo" to="/history">
               <HistoryIcon />
             </Link>
-            <div className='exit-logo'>
-            <LogOutButton className="navLink" />
+            <div className=" navLink exit-logo">
+            <LogOutButton />
             </div>
           </>
         )}
