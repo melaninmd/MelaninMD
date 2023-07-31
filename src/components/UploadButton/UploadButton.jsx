@@ -8,6 +8,7 @@ const ImageFileInput = ({ imageSrc, altText, onFileChange }) => (
       position: 'relative',
       width: '40px', 
       height: '40px',
+
       backgroundSize: 'cover', // to make sure image covers the whole input
       cursor: 'pointer'
     }}

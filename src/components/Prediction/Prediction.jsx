@@ -33,6 +33,7 @@ function Prediction() {
    
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
+	}
 
 }
 
@@ -92,6 +93,7 @@ function Prediction() {
 
     return(
         <>
+
 		{conditionReducer.predictions ? ( <>
         <img className="image-container" src={conditionReducer.url}/>
         {conditionReducer.predictions?.map((condition, i) => (
@@ -108,17 +110,27 @@ function Prediction() {
             
            
 
+      
+        <div
+				style={{
+					padding: "10px",
+					width: "30%",
+					height: "80%",
+					textAlign: "center",
+					margin: "auto 0",
+				}}
+			>
+			
+
+
         ))}
-        <div className="data-container">
-          
-        </div>
-        <div className="data-container">
-        </div>
+       
 
         <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>
 		</>) :  <Backdrop
+
 
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={!conditionReducer.predictions}
@@ -130,7 +142,7 @@ function Prediction() {
     )
 
 
-
 }
 export default Prediction;
+
 

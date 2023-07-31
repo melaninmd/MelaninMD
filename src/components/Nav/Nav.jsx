@@ -9,6 +9,9 @@ import { useHistory } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import imageLogo from '../Nav/mdLogo 2.png'
+import LogoutIcon from '@mui/icons-material/Logout';
+
 
 
 function Nav() {
@@ -27,7 +30,7 @@ function Nav() {
   
 
   return (
-    <div className="nav">
+    
       <div className='nav-logo'>
 
         {/* If a user is logged in, show these links */}
@@ -35,16 +38,17 @@ function Nav() {
           <>
             
             <Link className="navLink about-logo" to="/about">
-              About
+              <img className="img-logo" src={imageLogo} alt="" />
             </Link>
 
             <Link className="navLink quiz-logo" to="/quiz">
-              <QuizIcon />
+              <QuizIcon sx={{color: "white"}}/>
             </Link>
 
             <div className='camera-logo'>
             <UploadButton  altText = 'upload photo'
-            onFileChange={handleFile}/>
+           
+            onFileChange={handleFile}  sx={{color: "white"}}/>
             </div>
             
             
@@ -54,14 +58,17 @@ function Nav() {
             <Link className="navLink history-logo" to="/history">
               <HistoryIcon />
             </Link>
+            <div className=" navLink exit-logo">
 
-            <LogOutButton className="navLink exit-logo" />
+      
+            <LogOutButton />
+            </div>
           </>
         )}
 
         
       </div>
-    </div>
+   
   );
 }
 
