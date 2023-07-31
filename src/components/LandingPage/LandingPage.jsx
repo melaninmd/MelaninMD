@@ -24,13 +24,13 @@ function LandingPage() {
 
       <div className="grid">
         <div className="grid-col grid-col_8">
-          <p>temp words</p>
+          
         </div>
         <div className="grid-col grid-col_8">
         {!registered ? (
           <RegisterForm />
         ):(
-          <LoginForm/>
+          <LoginForm />
         )}
 
           <center>
