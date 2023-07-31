@@ -12,6 +12,7 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import imageLogo from '../Nav/mdLogo 2.png'
 import LogoutIcon from '@mui/icons-material/Logout';
 
+
 function Nav() {
   const dispatch = useDispatch();
   const [image, setImage] = useState();
@@ -65,7 +66,9 @@ function Nav() {
               <HistoryIcon />
             </Link>
             <div className=" navLink exit-logo">
-            <LogoutIcon />
+
+      
+            <LogOutButton />
             </div>
           </>
         )}

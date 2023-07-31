@@ -104,14 +104,7 @@ function DiagnosisResult() {
             )
            
         })}
-        <div className="data-container">
-          <b className="condition-name">Acne</b>
-          <button className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
-        </div>
-        <div className="data-container">
-          <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-          <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
-        </div>
+      
         <div
 				style={{
 					padding: "10px",
