@@ -12,6 +12,12 @@
     
    
 }
+.diagnosisContainer:nth-child(odd){
+  background-color: rgba(216, 216, 54, 0.603);
+}
+.diagnosisContainer:nth-child(even){
+  background-color: rgb(201, 162, 243);
+}
 
 
 .diagnosisPic{
@@ -29,7 +35,7 @@
 }
 .picture-date-container{
   border: 1px solid black;
-  width: 33%;
+  width: 40%;
   float: left;
   margin: 5px;
   
