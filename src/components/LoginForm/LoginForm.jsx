@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
-
+import './LoginForm.css'
+import loginImage from './login3.png'
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -25,6 +26,8 @@ function LoginForm() {
   }; // end login
 
   return (
+    <>
+   <img className='login-image' src={loginImage} alt="" />
     <form className="formPanel" onSubmit={login}>
       <h2>Login</h2>
       {errors.loginMessage && (
@@ -60,6 +63,7 @@ function LoginForm() {
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>
     </form>
+    </>
   );
 }
 
