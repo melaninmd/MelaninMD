@@ -13,28 +13,21 @@ import imageLogo from '../Nav/mdLogo 2.png'
 import LogoutIcon from '@mui/icons-material/Logout';
 
 
+
 function Nav() {
   const dispatch = useDispatch();
-  const [image, setImage] = useState();
   const user = useSelector((store) => store.user);
   const history = useHistory(); 
 
   const handleFile = (event) =>{
     event.preventDefault();
-    setImage(event.target.files[0]);
+    const img = event.target.files[0];
+    dispatch({type: 'GET_CONDITION', payload: {image: img}});
+    history.push('/prediction')
     
   }
 
-  useEffect(()=>{
-    if(image){
-      console.log(image);
-      dispatch({type: 'GET_CONDITION', payload: {image: image}});
-      setImage(null);
-    // Navigate to the prediction page after image is uploaded and processed
-      history.push('/prediction');
-    }
-    
-  }, [image]);
+  
 
   return (
     

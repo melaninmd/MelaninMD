@@ -1,6 +1,4 @@
-.nav {
 
-}
 
 .nav-logo {
   display: flex; /* Use flexbox to arrange icons/links side by side */
@@ -15,9 +13,6 @@
   position: fixed;
 }
 
-.navLink {
-
-}
 
 .history-logo,
 .about-logo,
@@ -37,10 +32,7 @@
   color: white;
 }
 
-.about-logo {
-  color: white;
 
-}
 
 .camera-logo {
 
@@ -48,6 +40,7 @@
 color: white;
 
 }
+
 
 
 
