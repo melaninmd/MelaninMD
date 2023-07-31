@@ -4,10 +4,12 @@ import { useState } from "react";
 
 function HistoryItem(props) {
     const dispatch = useDispatch();
-    const [showHistory, setShowHistory] = useState(true);
+    const [showHistory, setShowHistory] = useState(false);
+    const [className, setClassName] = useState("arrow-down");
     const history = useSelector(store => store.historyReducer);
     let height;
-    let arrow;
+    
+
 
 
 //grabbing the pictures and dates that go with each diagnosis
@@ -52,12 +54,12 @@ function HistoryItem(props) {
 
         if(showHistory){
             height = '300px';
-            arrow = "arrow-down";
+            setClassName("arrow-down");
             
 
         } else {
             height = '100px';
-            arrow = "arrow-up";
+            setClassName("arrow-up");
         }
         
     }
@@ -75,7 +77,7 @@ function HistoryItem(props) {
                 <div className="top" onClick={handleArrow}>
                     Prediction: {props.item.prediction_name.map(name => name + " ")}
                     <div className="prediction-names">
-                        <div className="arrow-down"></div>
+                        <div className={className}></div>
                     </div>
                 </div>
 
@@ -97,6 +99,8 @@ function HistoryItem(props) {
             </>}
                 
         
+            </div>
+
             </div>
 
 

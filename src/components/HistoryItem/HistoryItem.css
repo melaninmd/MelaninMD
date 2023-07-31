@@ -36,6 +36,7 @@
 }
 .top{
   width: 100%;
+  float: left;
 }
 .middle{
   width: 100%;
@@ -81,22 +82,22 @@ input[type='file']{
 .arrow-down {
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     position: relative;
+    float: right;
     
    
   }
   .arrow-up {
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
     padding: 3px;
     transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
-    position: relative;
+    
+    float: right;
     
    
   }

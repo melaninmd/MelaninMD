@@ -90,6 +90,7 @@ function Prediction() {
                     {/* <p>{condition.confidence}</p> */}
                 </div>
         ))}
+
         <div className="bar">
                 <Bar data={generateChartData()} options={options} />
             </div>
