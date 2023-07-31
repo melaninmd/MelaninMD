@@ -24,7 +24,7 @@ ChartJS.register(
 
 
 function Prediction() {
-    const dispatch = useDispatch();
+   
     const conditionReducer = useSelector((store) => store.conditionReducer);
    
     function readMore (condition) {
@@ -106,14 +106,7 @@ function Prediction() {
             )
            
         })}
-        <div className="data-container">
-          <b className="condition-name">Acne</b>
-          <button className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
-        </div>
-        <div className="data-container">
-          <b className="condition-name">dermatiittititfdfddfgfgfgfgfd</b>
-          <button  className="p-btn" src="https://www.loveshackfancy.com/collections/new-arrivals">read more</button>
-        </div>
+        
         <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>
