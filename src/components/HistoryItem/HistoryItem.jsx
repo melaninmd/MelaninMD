@@ -100,7 +100,7 @@ function HistoryItem(props) {
             </div>
 
 
-
+</div>
            
         
          
