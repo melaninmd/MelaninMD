@@ -67,6 +67,7 @@ function HistoryItem(props) {
         <div className="diagnosisContainer">
 
 
+
             <div className="arrow-btn" style={{height:{height}}}>
 
 
@@ -98,11 +99,12 @@ function HistoryItem(props) {
             </div>
 
 
+
            
         
          
             
-        </div>
+       
     );
 }
 

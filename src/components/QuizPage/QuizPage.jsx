@@ -58,7 +58,7 @@ function QuizPage() {
               cold temperatures? (If yes, then dry skin)
             </Typography>
             <Typography>Yes</Typography>
-            <input type="radio" onClick={() => setPredictionTwo(!predictionTwo)}/>
+            <input type="radio" onClick={() => setPredictionTwo(!predictionTwo)} />
             <Typography>No</Typography>
             <input type="radio" />
             </>
