@@ -3,7 +3,7 @@
     height: 200px;
     padding-left: 20px;
     padding-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 0%;
     margin-left: 5%;
     box-shadow: 5px 8px 16px 5px rgb(175, 118, 118);
     border-radius: 10px;
@@ -21,7 +21,9 @@
     margin-top: 5%;
     margin-bottom: 5%;
     padding: 10px; 
-   
+    justify-content: flex-end;
+    
+
 }
 
 .condition-name {

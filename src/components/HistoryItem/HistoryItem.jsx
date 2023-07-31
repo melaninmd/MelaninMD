@@ -70,6 +70,7 @@ function HistoryItem(props) {
 
 
 
+
             <div className="arrow-btn" style={{height:{height}}}>
 
 
@@ -103,12 +104,11 @@ function HistoryItem(props) {
             </div>
 
 
-
+</div>
            
         
          
             
-       
     );
 }
 

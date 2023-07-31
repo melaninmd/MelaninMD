@@ -1,6 +1,6 @@
 .diagnosisContainer{
-    /* height: 200px; */
-    overflow-y: scroll; /* or overflow-x: auto; */
+  
+    overflow-x: scroll; /* or overflow-x: auto; */
     
     border: 1px solid black;
     border-radius: 10px;
