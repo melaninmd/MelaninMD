@@ -1,36 +1,106 @@
 .diagnosisContainer{
-    height: 200px;
-    overflow-x: scroll; /* or overflow-x: auto; */
+    /* height: 200px; */
+    overflow-y: scroll; /* or overflow-x: auto; */
     
-    
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
    
-    width: 400px;
-    margin-left: 40px;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+    
    
 }
+
 
 .diagnosisPic{
     height: 100px;
 }
 
-.prediction-names {
+/* .prediction-names {
    padding-left: 95%;
 
+} */
+.pictureDate{
+  margin: 0;
+  font-weight: bold;
+  font-size: 10px;
+}
+.picture-date-container{
+  border: 1px solid black;
+  width: 33%;
+  float: left;
+  margin: 5px;
+  
+}
+.top{
+  width: 100%;
+}
+.middle{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+.bottom{
+  width: 100%;
+  
+}
+input[type='file']{
+  display: none;
+}
+.update-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Choose the background color you prefer */
+  color: #fff; /* Choose the text color you prefer */
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  /* height: 40px;
+  width: 80px; */
+  position: relative;
+  bottom:-1px;
+  border: 1px solid black;
+}
+.delete-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Choose the background color you prefer */
+  color: #fff; /* Choose the text color you prefer */
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  border: 1px solid black;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-left: 140px;
 }
 
-.arrow {
+.arrow-down {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    position: relative;
     
    
   }
-   /* .arrow-btn {
-    padding-left: 85%;
-  }  */
+  .arrow-up {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    position: relative;
+    
+   
+  }
+
   
  
   /* .up {

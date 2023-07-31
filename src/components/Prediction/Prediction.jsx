@@ -27,7 +27,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function Prediction() {
-    const dispatch = useDispatch();
+   
     const conditionReducer = useSelector((store) => store.conditionReducer);
 	const [open, setOpen] = useState(false);
    
@@ -107,12 +107,14 @@ function Prediction() {
 
             
            
+
         ))}
         <div className="data-container">
           
         </div>
         <div className="data-container">
         </div>
+
         <div className="bar">
 				<Bar data={generateChartData()} options={options} />
 			</div>

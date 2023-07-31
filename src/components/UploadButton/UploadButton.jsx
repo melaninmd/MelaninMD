@@ -14,7 +14,7 @@ const ImageFileInput = ({ imageSrc, altText, onFileChange }) => (
   >
     <input
       type="file"
-      accept="image/*"
+      accept="image/jpg, image/png"
       name='image'
       style={{
         opacity: 0,
