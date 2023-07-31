@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import QuizIcon from '@mui/icons-material/Quiz';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import imageQuiz from '../Nav/quiz.png'
+import imageLogo from '../Nav/mdLogo 2.png'
 import LogoutIcon from '@mui/icons-material/Logout';
 
 function Nav() {
@@ -44,7 +44,7 @@ function Nav() {
           <>
             
             <Link className="navLink about-logo" to="/about">
-              About
+              <img className="img-logo" src={imageLogo} alt="" />
             </Link>
 
             <Link className="navLink quiz-logo" to="/quiz">
