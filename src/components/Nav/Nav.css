@@ -1,9 +1,11 @@
 
 
 .nav-logo {
+
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
+
   width: 100%;
   height: 80px;
   background-color:  #195382;
@@ -11,6 +13,7 @@
   right: 0;
   z-index: 5;
   position: fixed;
+  
 }
 
 
@@ -24,20 +27,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 
 .history-logo {
-  padding-left: 10px;
+  /* padding-left: 10px; */
   color: white;
+  
 }
+
 
 
 
 .camera-logo {
 
+
   padding-top: 3%;
   margin-bottom: 3px;
+
 color: white;
 
 }
