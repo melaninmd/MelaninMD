@@ -61,8 +61,9 @@ function Nav() {
             <Link className="navLink history-logo" to="/history">
               <HistoryIcon />
             </Link>
-
-            <LogOutButton className="navLink exit-logo" />
+            <div className='exit-logo'>
+            <LogOutButton className="navLink" />
+            </div>
           </>
         )}
 

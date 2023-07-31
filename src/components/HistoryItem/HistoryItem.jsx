@@ -23,32 +23,23 @@ function HistoryItem(props) {
 
     return (
         <div className="diagnosisContainer">
-            <button className="arrow-btn" onClick={handleArrow}>
-                
-                Prediction: {props.item.prediction_name.map(name => name + " ")}
-
-               
-                <div className="prediction-names">
-                <div className="arrow"></div>
-                </div>
-                
-               
-                {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
-            {showHistory &&  <>
-                <button type='button' onClick={() => deleteFn(props.item.diagnosis_id)}>Delete</button>
-            <button>Upload</button> </> }
-                
-         
-
-     
-            
-            </button>
-
-           
-        
-         
-            
-        </div>
+        <button className="arrow-btn" onClick={handleArrow}>
+          Prediction: {props.item.prediction_name.map(name => name + " ")}
+  
+          <div className="prediction-names">
+            <div className="arrow"></div>
+          </div>
+  
+          {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
+  
+          {showHistory && (
+            <>
+              <button type='button' onClick={() => deleteFn(props.item.diagnosis_id)}>Delete</button>
+              <button>Upload</button>
+            </>
+          )}
+        </button>
+      </div>
     );
 }
 

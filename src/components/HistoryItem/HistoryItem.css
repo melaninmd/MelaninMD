@@ -9,6 +9,12 @@
    
 }
 
+.diagnosisContainer {
+  height: 200px;
+  overflow-x: scroll; /* or overflow-x: auto; */
+
+}
+
 .diagnosisPic{
     height: 100px;
 }
