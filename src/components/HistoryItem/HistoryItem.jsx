@@ -55,13 +55,17 @@ function HistoryItem(props) {
                 
                
                 {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
-            {showHistory &&  <>
+            {showHistory &&  
+                <>
                 <form>
+                    
                 <button type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
                 <input name = 'photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
             </form> </>}
                 
-       
+
+        </div>
+
             
 
 
@@ -69,7 +73,7 @@ function HistoryItem(props) {
         
          
             
-        </div>
+       
     );
 }
 
