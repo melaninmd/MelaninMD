@@ -45,11 +45,13 @@ function Nav() {
               <QuizIcon sx={{color: "white"}}/>
             </Link>
 
-            <div className='camera-logo'>
-            <UploadButton  altText = 'upload photo'
-           
-            onFileChange={handleFile}  sx={{color: "white"}}/>
-            </div>
+            
+            <UploadButton  
+            altText = 'upload photo'
+            onFileChange={handleFile}
+            />
+            
+            
             
             
             
