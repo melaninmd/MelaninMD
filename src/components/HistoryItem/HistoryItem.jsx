@@ -5,14 +5,28 @@ import { useState } from "react";
 function HistoryItem(props) {
     const dispatch = useDispatch();
     const [showHistory, setShowHistory] = useState(false);
+    const [className, setClassName] = useState("arrow-down");
     const history = useSelector(store => store.historyReducer);
+    let height;
+    
 
 
+
+//grabbing the pictures and dates that go with each diagnosis
     let pictureArray=[];
     for(let pic of history.link){
         if(pic.id === props.item.diagnosis_id){
             pic.picture_link.forEach(element => {
                 pictureArray.push(element)
+            });
+
+        }
+    }
+    let dateArray=[];
+    for(let pic of history.link){
+        if(pic.id === props.item.diagnosis_id){
+            pic.date.forEach(element => {
+                dateArray.push(element);
             });
 
         }
@@ -37,6 +51,17 @@ function HistoryItem(props) {
 
     const handleArrow = () => {
         setShowHistory(!showHistory); 
+
+        if(showHistory){
+            height = '300px';
+            setClassName("arrow-down");
+            
+
+        } else {
+            height = '100px';
+            setClassName("arrow-up");
+        }
+        
     }
 
 
@@ -44,32 +69,46 @@ function HistoryItem(props) {
         <div className="diagnosisContainer">
 
 
-            <button className="arrow-btn" onClick={handleArrow}>
-                
-                Prediction: {props.item.prediction_name.map(name => name + " ")}
- </button>
-               
-                <div className="prediction-names">
-                <div className="arrow"></div>
+
+
+            <div className="arrow-btn" style={{height:{height}}}>
+
+
+                <div className="top" onClick={handleArrow}>
+                    Prediction: {props.item.prediction_name.map(name => name + " ")}
+                    <div className="prediction-names">
+                        <div className={className}></div>
+                    </div>
                 </div>
-                
-               
-                {showHistory && pictureArray.map((picture, i) => <img className="diagnosisPic" key={i} src={picture} />)}
+
+                <div className="middle">
+                    {showHistory && pictureArray.map((picture, i) => 
+                    <div key={i} className="picture-date-container">
+                        <img className="diagnosisPic" src={picture} />
+                        <p className="pictureDate">{dateArray[i]}</p>
+                    </div>
+                    )}
+                </div>
             {showHistory &&  <>
-                <form>
-                <button type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
-                <input name = 'photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
-            </form> </>}
+                <br/>
+                <div className="bottom">
+                    <button className="delete-btn" type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
+                    <input className="update-input" name='photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
+                    <label className="update-btn" htmlFor="update-input">Update</label>
+                </div>
+            </>}
                 
-       
-            
+        
+            </div>
+
+            </div>
 
 
+</div>
            
         
          
             
-        </div>
     );
 }
 

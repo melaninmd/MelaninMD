@@ -10,6 +10,14 @@ Grid
   justify-content: flex-start;
   align-items: flex-start;
 }
+.landing-box{
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+}
+.register-login-box{
+  margin-top: 10%;
+}
 
 .grid-col {
   flex: 0 0 auto;

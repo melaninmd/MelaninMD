@@ -16,7 +16,7 @@ router.get('/get', (req, res) => {
   GROUP BY diagnosis.id;`
   pool.query(queryText, [userId])
     .then(response =>{
-      console.log('here\'s our stuff! =>', response.rows);
+      // console.log('here\'s our stuff! =>', response.rows);
       data=response.rows;
       const otherQueryText = `SELECT diagnosis.id, JSON_AGG(pictures.filepath) AS picture_link, JSON_AGG(pictures.date) AS date FROM pictures
       JOIN diagnosis ON pictures.diagnosis_id = diagnosis.id
