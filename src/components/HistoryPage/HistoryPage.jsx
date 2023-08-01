@@ -22,7 +22,7 @@ function InfoPage() {
 
   return (
     <div className="container">
-      <h2>{user.username}'s history</h2>
+      <h2 className='user-one'>{user.username}'s history</h2>
       {history ?(
         history.data?.map((item, i)=>  <HistoryItem key={i} item={item}/> )
         
