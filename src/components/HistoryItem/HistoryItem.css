@@ -1,7 +1,7 @@
 .diagnosisContainer{
   
-    overflow-x: scroll; /* or overflow-x: auto; */
-    
+    /* overflow-x: scroll; or overflow-x: auto; */
+    overflow: hidden;
     border: 1px solid #7B7A7A;
     border-radius: 10px;
     padding: 5px;
@@ -38,7 +38,7 @@
   font-family: 'Lucida Handwriting';
 }
 .picture-date-container{
-  border: 1px solid #7B7A7A;
+  /* border: 1px solid #7B7A7A; */
   width: 40%;
   float: left;
   margin: 5px;
@@ -57,42 +57,80 @@
   width: 100%;
   display:flex;
   flex-wrap: wrap;
+  padding-left: 12px;
 }
 .bottom{
-  width: 100%;
+  width: 105%;
+  position: relative;
+  left:-5px;
+  bottom:-5px;
+  background-color: #8D9DB2; 
   
 }
 input[type='file']{
   display: none;
 }
 .update-btn{
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
-  background-color: #7B7A7A; /* Choose the background color you prefer */
-  color: white; /* Choose the text color you prefer */
+  padding-left: 22px;
+  background-color: #7B7A7A; 
+  color: white; 
   font-size: 15px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   cursor: pointer;
   /* height: 40px;
   width: 80px; */
-  position: relative;
-  bottom:-1px;
-  border: 1px solid #7B7A7A;
+  width: 39%;
+  /* position: relative;
+  bottom:-1px; */
+  float: right;
+  /* position: relative;
+  left:5px;
+  bottom:-5px; */
+  justify-content: center;
+  align-items: center;
 }
 .delete-btn{
-  display: inline-block;
+  display: inline-flexbox;
   padding: 10px 20px;
-  background-color: #7B7A7A; /* Choose the background color you prefer */
-  color: white; /* Choose the text color you prefer */
-  border-radius: 4px;
+  background-color: #7B7A7A; 
+  color: white; 
+  /* border-radius: 4px; */
   cursor: pointer;
   height: 40px;
-  width: 80px;
-  border: 1px solid #7B7A7A;
+  width: 47%;
+  border: 1px solid #8D9DB2;
+  font-size: 15px;
+  margin-right: 0px;
+  /* margin-left: 50px; */
+  font-weight: bold;
+  /* position: relative;
+  left: -5px;
+  bottom:-5px; */
+  border-right: 1px solid black;
+}
+.details-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: #7B7A7A; */
+  color: white; 
+  /* border-radius: 10px; */
+  cursor: pointer;
+  height: 40px;
+  width: 104%;
+  border: 1px solid #8D9DB2;
   font-size: 15px;
   margin-right: 5px;
-  margin-left: 130px;
   font-weight: bold;
+  /* margin-left: 17px; */
+  /* position: relative;
+  bottom: -5px;
+  left: -5px; */
+  border-top: 1px solid black;
+  padding-right: 45px;
+  
+
 }
 
 .arrow-down {
@@ -116,6 +154,10 @@ input[type='file']{
     float: right;
     
    
+  }
+
+  .history-btn{
+    background-color: #8D9DB2;
   }
 
   

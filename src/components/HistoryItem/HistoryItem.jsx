@@ -2,14 +2,18 @@ import { useSelector, useDispatch } from "react-redux";
 import './HistoryItem.css';
 import { useEffect, useState } from "react";
 import DeleteConfirmation from "../DeleteConfirmation/DeleteConfirmation";
+import { useHistory } from "react-router-dom";
 
 function HistoryItem(props) {
     const dispatch = useDispatch();
+    const ourHistory = useHistory();
     const [showHistory, setShowHistory] = useState(false);
     const [className, setClassName] = useState("arrow-down");
     const [showPopUp, setShowPopUp] = useState(false);
     const history = useSelector(store => store.historyReducer);
     let height;
+
+    let predictionArr = [];
     
 
 
@@ -50,6 +54,15 @@ function HistoryItem(props) {
         dispatch({type: 'ADD_IMAGE', payload: objToSend});
     }
 
+    const detailsFn = () => {
+        const objToSend = {
+            predictions: predictionArr,
+            url:pictureArray[0], 
+        }
+        dispatch({type: 'SET_CONDITION', payload: objToSend})
+        ourHistory.push('/prediction');
+    }
+
     
 
     const handleArrow = () => {
@@ -67,8 +80,18 @@ function HistoryItem(props) {
         
     }
 
+    for (let i = 0; i<props.item.confidence.length; i++){
+        const obj = {
+            confidence: props.item.confidence[i], 
+            icd: props.item.icd[i],
+            name: props.item.prediction_name[i],
+            readMoreUrl: props.item.prediction_link[i],
+        }
+        predictionArr.push(obj);
+    }
 
 
+    
     return (
         <div className="diagnosisContainer">
 
@@ -96,10 +119,13 @@ function HistoryItem(props) {
             {showHistory &&  <>
                 <br/>
                 <div className="bottom">
-                    <button className="delete-btn" type='button' onClick={() => setShowPopUp(true)}>Delete</button>
-                    <label className="update-btn">
+                    
+                    <button className="delete-btn history-btn" type='button' onClick={() => setShowPopUp(true)}>Delete</button>
+                    <label className="update-btn history-btn">Update
                     <input className="update-input" name='photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
-                    Update</label>
+                    </label>
+                    <button className="details-btn history-btn" onClick={()=>detailsFn()}>Details</button>
+                    
                 </div>
             </>}
             {showPopUp&&(
