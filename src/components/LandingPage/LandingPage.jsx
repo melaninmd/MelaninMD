@@ -3,8 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
-import LoginForm from '../LoginForm/LoginForm';
+import LoginRegisterForm from '../LoginRegisterForm/LoginRegisterForm';
 
 
 function LandingPage() {
@@ -28,13 +27,9 @@ function LandingPage() {
        
         <div className="grid-col grid-col_9 register-login-box">
 
-        {!registered ? (
-          <RegisterForm />
-        ):(
-          <LoginForm />
-        )}
+        <LoginRegisterForm/>
 
-          <center>
+          {/* <center>
           {!registered ?(
               <div className='switch'>
                 <h4>Already a Member?</h4>
@@ -50,7 +45,7 @@ function LandingPage() {
               </button>
               </div>
             )}
-          </center>
+          </center> */}
         </div>
       </div>
     </div>
