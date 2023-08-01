@@ -42,7 +42,7 @@ function Nav() {
             </Link>
 
             <Link className="navLink quiz-logo" to="/quiz">
-              <QuizIcon sx={{color: "white"}}/>
+              <QuizIcon sx={{color: "#7B7A7A"}}/>
             </Link>
 
             

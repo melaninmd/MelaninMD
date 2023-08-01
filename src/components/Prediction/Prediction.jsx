@@ -67,11 +67,11 @@ function Prediction() {
                     label: "Bar Chart",
                     data: data,
                     backgroundColor: [
-                        "green",
-                        "blue",
-                        "red",
-                        "yellow",
-                        "orange",
+                        "lavender",
+                        "#8D9DB2",
+                        "#F4C2C2",
+                        "#7B7A7A",
+                        "rgb(170, 170, 232)",
                         "purple",
                         "pink",
                     ], // Customize the bar color here

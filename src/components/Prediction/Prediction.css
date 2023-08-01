@@ -43,17 +43,19 @@
     border-radius: 8px;
     flex-basis: 80px; 
     width: 100px;
+    /* background-color:#8D9DB2 ;
+    color: white; */
    
 }
 
 .data-container:nth-child(odd) {
-    background-color: #75a6ce;
+    background-color: lavender;
     color: rgb(255, 255, 255);
   
 }
 
 .data-container:nth-child(even) {
-    background-color: #195382;
+    background-color: #F4C2C2;
     color: rgb(255, 255, 255);
     
 }

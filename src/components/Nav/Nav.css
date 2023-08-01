@@ -8,7 +8,7 @@
 
   width: 100%;
   height: 80px;
-  background-color:  #195382;
+  background-color:  lavender;
   bottom: 0;
   right: 0;
   z-index: 5;
@@ -33,7 +33,7 @@
 
 .history-logo {
   /* padding-left: 10px; */
-  color: white;
+  color: #7B7A7A;
   
 }
 
@@ -46,7 +46,7 @@
   padding-top: 3%;
   margin-bottom: 3px;
 
-color: white;
+color: #7B7A7A;
 
 }
 
@@ -54,8 +54,8 @@ color: white;
 
 
 .exit-logo {
-  background-color: #195382;
-color: white;
+  background-color: lavender;
+color: #7B7A7A;
 
 
 

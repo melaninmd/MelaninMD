@@ -32,15 +32,15 @@ function QuizPage() {
   return (
     <div className="container">
       <form></form>
-      <Typography variant="h3" sx={{ textAlign: "center", height: "100%" }}>
+      <Typography variant="h3" sx={{ textAlign: "center", height: "100%", color: "#7B7A7A" }}>
         Quiz
       </Typography>
       <br />
-      <Typography variant="h4" sx={{textAlign: "center"}}>
+      <Typography variant="h4" sx={{textAlign: "center", color: "#7B7A7A"}}>
         What's your skin type?
       </Typography>
       <br />
-      <Card elevation={7} sx={{backgroundColor: "#195382", color: "white"}}>
+      <Card elevation={7} sx={{backgroundColor: "Lavender", color: "#7B7A7A"}}>
         <CardContent>
           {click ? (
             <>
@@ -101,16 +101,16 @@ function QuizPage() {
       <br />
       <br/>
         <Button
-          sx={{ backgroundColor: "ButtonShadow" }}
+          sx={{ backgroundColor: "ButtonShadow" , color: "#7B7A7A"}}
           onClick={() => clickPush()}
         >
           Back
         </Button>
         <br />
         <br />
-              <Typography variant="h4" sx={{textAlign: "center"}}>Why is it important to know skin type?</Typography>
+              <Typography variant="h4" sx={{textAlign: "center", color: "#7B7A7A"}}>Why is it important to know skin type?</Typography>
               <br />
-      <Card elevation={7} sx={{backgroundColor: "#195382", color: "white"}}>
+      <Card elevation={7} style={{backgroundColor: "Lavender", color: "#7B7A7A", borderRadius: "10px"}}>
         <CardContent>
           
           <Typography>

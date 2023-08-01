@@ -12,7 +12,7 @@ const ImageFileInput = ({ altText, onFileChange }) => {
         position: 'relative',
         width: '50px',
         height: '40px',
-        color: 'white',
+        color: '#7B7A7A',
         backgroundSize: 'cover', // to make sure image covers the whole input
         cursor: 'pointer'
       }}
