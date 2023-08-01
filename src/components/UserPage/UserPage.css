@@ -1,7 +1,7 @@
 .mission-container {
-    background-color: #195382;
+    background-color: lavender;
     border-radius: 10px;
-    color: white;
+    color: #7B7A7A;
 }
 
 p{
@@ -16,7 +16,7 @@ h1{
 }
 
 .usage-container {
-    background-color:#75a6ce;
+    background-color:#7B7A7A;
     border-radius: 10px;
     color: white;
 }
