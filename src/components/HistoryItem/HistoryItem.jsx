@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import './HistoryItem.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DeleteConfirmation from "../DeleteConfirmation/DeleteConfirmation";
 
 function HistoryItem(props) {
@@ -36,6 +36,7 @@ function HistoryItem(props) {
 
     const deleteFn = (id) => {
         dispatch({ type: 'DELETE_HISTORY', payload: id });
+        setShowPopUp(false);
     }
 
 
@@ -67,6 +68,7 @@ function HistoryItem(props) {
     }
 
 
+
     return (
         <div className="diagnosisContainer">
 
@@ -95,8 +97,9 @@ function HistoryItem(props) {
                 <br/>
                 <div className="bottom">
                     <button className="delete-btn" type='button' onClick={() => setShowPopUp(true)}>Delete</button>
+                    <label className="update-btn">
                     <input className="update-input" name='photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
-                    <label className="update-btn" htmlFor="update-input">Update</label>
+                    Update</label>
                 </div>
             </>}
             {showPopUp&&(
