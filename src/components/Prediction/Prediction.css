@@ -9,6 +9,10 @@
     border-radius: 10px;
 } */
 
+.card-one {
+    padding-left: 20px;
+    justify-content: center;
+}
 .data-container {
     display: flex;
     align-items: center;
@@ -29,7 +33,8 @@
 .condition-name {
     flex-grow: 1; 
     margin-right: 5px; 
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
 
 }
 
@@ -39,17 +44,19 @@
     border-radius: 8px;
     flex-basis: 80px; 
     width: 100px;
+    /* background-color:#8D9DB2 ;
+    color: white; */
    
 }
 
 .data-container:nth-child(odd) {
-    background-color: #75a6ce;
+    background-color: lavender;
     color: rgb(255, 255, 255);
   
 }
 
 .data-container:nth-child(even) {
-    background-color: #195382;
+    background-color: #F4C2C2;
     color: rgb(255, 255, 255);
     
 }

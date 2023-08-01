@@ -2,7 +2,7 @@
   
     overflow-x: scroll; /* or overflow-x: auto; */
     
-    border: 1px solid black;
+    border: 1px solid #7B7A7A;
     border-radius: 10px;
     padding: 5px;
    
@@ -13,11 +13,12 @@
    
 }
 .diagnosisContainer:nth-child(odd){
-  background-color: rgb(248, 208, 135);
+  background-color: #F4C2C2;
+  color: #7B7A7A;
 }
 .diagnosisContainer:nth-child(even){
-  background-color: rgb(130, 106, 62);
-  color: white;
+  background-color: lavender;
+  color: #7B7A7A;
 }
 
 
@@ -37,7 +38,7 @@
   font-family: 'Lucida Handwriting';
 }
 .picture-date-container{
-  border: 1px solid black;
+  border: 1px solid #7B7A7A;
   width: 40%;
   float: left;
   margin: 5px;
@@ -67,8 +68,8 @@ input[type='file']{
 .update-btn{
   display: inline-block;
   padding: 10px 20px;
-  background-color: orange; /* Choose the background color you prefer */
-  color: #fff; /* Choose the text color you prefer */
+  background-color: #7B7A7A; /* Choose the background color you prefer */
+  color: white; /* Choose the text color you prefer */
   font-size: 15px;
   border-radius: 4px;
   cursor: pointer;
@@ -76,18 +77,18 @@ input[type='file']{
   width: 80px; */
   position: relative;
   bottom:-1px;
-  border: 1px solid black;
+  border: 1px solid #7B7A7A;
 }
 .delete-btn{
   display: inline-block;
   padding: 10px 20px;
-  background-color: orangered; /* Choose the background color you prefer */
-  color: #fff; /* Choose the text color you prefer */
+  background-color: #7B7A7A; /* Choose the background color you prefer */
+  color: white; /* Choose the text color you prefer */
   border-radius: 4px;
   cursor: pointer;
   height: 40px;
   width: 80px;
-  border: 1px solid black;
+  border: 1px solid #7B7A7A;
   font-size: 15px;
   margin-right: 5px;
   margin-left: 130px;
@@ -95,7 +96,7 @@ input[type='file']{
 }
 
 .arrow-down {
-    border: solid black;
+    border: solid #7B7A7A;
     border-width: 0 3px 3px 0;
     padding: 3px;
     transform: rotate(45deg);
@@ -106,7 +107,7 @@ input[type='file']{
    
   }
   .arrow-up {
-    border: solid black;
+    border: solid #7B7A7A;
     border-width: 0 3px 3px 0;
     padding: 3px;
     transform: rotate(225deg);

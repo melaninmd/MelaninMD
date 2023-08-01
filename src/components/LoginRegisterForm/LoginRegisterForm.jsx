@@ -2,6 +2,7 @@ import './LoginRegisterForm.css'
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
+import image from './login3.png'
 
 
 function LoginRegisterForm(){
@@ -46,7 +47,9 @@ function LoginRegisterForm(){
 
 
     return(
-
+      <>
+     
+        <img className='image' src={image} />
         <div className="main">    
             <input type="checkbox" id="chk" aria-hidden="true" />
 
@@ -105,7 +108,7 @@ function LoginRegisterForm(){
             </div>
         </div>
 
-
+        </>
     )
 }
 
