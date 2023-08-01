@@ -80,6 +80,7 @@ function Prediction() {
             borderRadius: 25,
         };
     };
+    
     return(
         <>
         <br />
@@ -93,7 +94,7 @@ function Prediction() {
             </CardContent>
         </Card>
         {conditionReducer.predictions?.map((condition, i) => (
-                <div className="data-container">
+                <div className="data-container" key={i}>
                     <b className="condition-name">{condition.name}</b>
                     <button  className="p-btn" onClick={()=> readMore(condition)}>Read More</button>
                     {/* <p>{condition.confidence}</p> */}
