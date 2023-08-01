@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
 import './HistoryItem.css';
 import { useState } from "react";
+import DeleteConfirmation from "../DeleteConfirmation/DeleteConfirmation";
 
 function HistoryItem(props) {
     const dispatch = useDispatch();
     const [showHistory, setShowHistory] = useState(false);
     const [className, setClassName] = useState("arrow-down");
+    const [showPopUp, setShowPopUp] = useState(false);
     const history = useSelector(store => store.historyReducer);
     let height;
     
@@ -75,7 +77,7 @@ function HistoryItem(props) {
 
 
                 <div className="top" onClick={handleArrow}>
-                    Prediction: {props.item.prediction_name.map(name => name + " ")}
+                    <p>Prediction: {props.item.prediction_name.map(name => name + " ")}</p>
                     <div className="prediction-names">
                         <div className={className}></div>
                     </div>
@@ -92,18 +94,22 @@ function HistoryItem(props) {
             {showHistory &&  <>
                 <br/>
                 <div className="bottom">
-                    <button className="delete-btn" type='button' onClick={()=>deleteFn(props.item.diagnosis_id)}>Delete</button>
+                    <button className="delete-btn" type='button' onClick={() => setShowPopUp(true)}>Delete</button>
                     <input className="update-input" name='photo' type="file" accept="image/*" onChange={(event)=>uploadFn(event, props.item.diagnosis_id)}/>
                     <label className="update-btn" htmlFor="update-input">Update</label>
                 </div>
             </>}
+            {showPopUp&&(
+                <DeleteConfirmation onCancel={() => setShowPopUp(false)} onConfirm={()=>deleteFn(props.item.diagnosis_id)}/>
+            )}
+            
                 
         
             </div>
 
             </div>
 
-           
+
         
          
             

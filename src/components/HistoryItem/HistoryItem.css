@@ -13,10 +13,11 @@
    
 }
 .diagnosisContainer:nth-child(odd){
-  background-color: rgba(216, 216, 54, 0.603);
+  background-color: rgb(248, 208, 135);
 }
 .diagnosisContainer:nth-child(even){
-  background-color: rgb(201, 162, 243);
+  background-color: rgb(130, 106, 62);
+  color: white;
 }
 
 
@@ -28,10 +29,12 @@
    padding-left: 95%;
 
 } */
+
 .pictureDate{
   margin: 0;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 18px;
+  font-family: 'Lucida Handwriting';
 }
 .picture-date-container{
   border: 1px solid black;
@@ -43,6 +46,11 @@
 .top{
   width: 100%;
   float: left;
+}
+.top p {
+  margin:1px;
+  font-weight: bold;
+  font-family: 'Lucida Handwriting', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .middle{
   width: 100%;
@@ -59,7 +67,7 @@ input[type='file']{
 .update-btn{
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff; /* Choose the background color you prefer */
+  background-color: orange; /* Choose the background color you prefer */
   color: #fff; /* Choose the text color you prefer */
   font-size: 15px;
   border-radius: 4px;
@@ -73,7 +81,7 @@ input[type='file']{
 .delete-btn{
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff; /* Choose the background color you prefer */
+  background-color: orangered; /* Choose the background color you prefer */
   color: #fff; /* Choose the text color you prefer */
   border-radius: 4px;
   cursor: pointer;
@@ -82,7 +90,8 @@ input[type='file']{
   border: 1px solid black;
   font-size: 15px;
   margin-right: 5px;
-  margin-left: 140px;
+  margin-left: 130px;
+  font-weight: bold;
 }
 
 .arrow-down {

@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, Typography, CardContent, Button } from "@mui/material";
+import { Card, Typography, CardContent, Button, colors } from "@mui/material";
 import { useState } from "react";
-import Radio from '@mui/material/Radio';
-import "./QuizPage.css"
+import Radio from "@mui/material/Radio";
+import "./QuizPage.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // This is one of our simplest components
@@ -11,18 +11,18 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // or even care what the redux state is'
 
 function QuizPage() {
-  const history = useHistory()
+  const history = useHistory();
   const [click, setClick] = useState(true);
   const [prediction, setPrediction] = useState(true);
   const [predictionTwo, setPredictionTwo] = useState(true);
-  const [press, setPress] = useState(true)
+  const [press, setPress] = useState(true);
 
   const clickPush = () => {
-    console.log('History button clicked')
-    setClick(true)
-    setPrediction(true)
-    setPredictionTwo(true)
-  }
+    console.log("History button clicked");
+    setClick(true);
+    setPrediction(true);
+    setPredictionTwo(true);
+  };
 
   const handleClick = () => {
     setClick(!click);
@@ -32,13 +32,16 @@ function QuizPage() {
   return (
     <div className="container">
       <form></form>
-      <Typography variant="h3" sx={{textAlign: "center", height: "100%"}}>Quiz</Typography>
+      <Typography variant="h3" sx={{ textAlign: "center", height: "100%" }}>
+        Quiz
+      </Typography>
       <br />
-      <Typography variant="h4" sx={{}}>What's your skin type?</Typography>
+      <Typography variant="h4" sx={{textAlign: "center"}}>
+        What's your skin type?
+      </Typography>
       <br />
-      <Card elevation={7}>
+      <Card elevation={7} sx={{backgroundColor: "#195382", color: "white"}}>
         <CardContent>
-         
           {click ? (
             <>
               {prediction ? (
@@ -76,9 +79,9 @@ function QuizPage() {
                     type="radio"
                     onClick={() => setPredictionTwo(!predictionTwo)}
                   />
-   
+
                   <Typography>No</Typography>
-                  <Radio type="radio" aria-label="No"/>
+                  <Radio type="radio" aria-label="No" />
                 </>
               ) : (
                 <Typography>
@@ -92,11 +95,42 @@ function QuizPage() {
                 </Typography>
               )}
             </>
-          )} 
-          
+          )}
         </CardContent>
       </Card>
-      <Button onClick={() => clickPush()}>Back</Button>
+      <br />
+      <br/>
+        <Button
+          sx={{ backgroundColor: "ButtonShadow" }}
+          onClick={() => clickPush()}
+        >
+          Back
+        </Button>
+        <br />
+        <br />
+              <Typography variant="h4" sx={{textAlign: "center"}}>Why is it important to know skin type?</Typography>
+              <br />
+      <Card elevation={7} sx={{backgroundColor: "#195382", color: "white"}}>
+        <CardContent>
+          
+          <Typography>
+            Knowing your skin type is essential for effective skincare and
+            overall skin health. Each skin type has unique characteristics and
+            needs, and using products and routines tailored to your specific
+            type can help address concerns and maintain a healthy complexion.
+            For example, oily skin may require oil-controlling products to
+            prevent breakouts, while dry skin needs hydrating products to retain
+            moisture. Using the wrong products for your skin type can lead to
+            issues like irritation, acne, or excessive dryness. Understanding
+            your skin type empowers you to make informed choices in your
+            skincare routine, ensuring that you provide the right care and
+            support for your skin's specific requirements.
+          </Typography>
+        </CardContent>
+      </Card>
+      <br />
+      <br />
+     
     </div>
   );
 }
