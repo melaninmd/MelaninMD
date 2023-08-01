@@ -21,6 +21,7 @@ function Nav() {
 
   const handleFile = (event) =>{
     event.preventDefault();
+    dispatch({type: 'SET_CONDITION', payload:{}})
     const img = event.target.files[0];
     dispatch({type: 'GET_CONDITION', payload: {image: img}});
     history.push('/prediction')

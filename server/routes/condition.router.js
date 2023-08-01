@@ -34,10 +34,11 @@ router.post('/',  (req, res) => {
     
     //FILESTACK DOES NOT ACCEPT JPEG
     const apiKey2 = process.env.API_KEY;
+    const fileStackKey = process.env.FILE_STACK_API_KEY;
 
           axios({
             method: "POST",
-            url: "https://www.filestackapi.com/api/store/S3?key=AkaVe8je9Thm6pWTbRcNwz",
+            url: `https://www.filestackapi.com/api/store/S3?key=${fileStackKey}`,
             data: imageBuffer,
             headers: {
                 "Content-Type": "image/*"
