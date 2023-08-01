@@ -64,7 +64,7 @@
   position: relative;
   left:-5px;
   bottom:-5px;
-  background-color: #8D9DB2; 
+  background-color: #EFEFEF; 
   
 }
 input[type='file']{
@@ -74,14 +74,14 @@ input[type='file']{
   display: block;
   padding: 10px 20px;
   padding-left: 22px;
-  background-color: #7B7A7A; 
-  color: white; 
+  background-color: #EFEFEF; 
+  color: #7B7A7A; 
   font-size: 15px;
   /* border-radius: 4px; */
   cursor: pointer;
   /* height: 40px;
   width: 80px; */
-  width: 39%;
+  width: 30%;
   /* position: relative;
   bottom:-1px; */
   float: right;
@@ -90,17 +90,18 @@ input[type='file']{
   bottom:-5px; */
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
 }
 .delete-btn{
   display: inline-flexbox;
   padding: 10px 20px;
-  background-color: #7B7A7A; 
-  color: white; 
+  background-color: #EFEFEF; 
+  color: #7B7A7A; 
   /* border-radius: 4px; */
   cursor: pointer;
   height: 40px;
   width: 47%;
-  border: 1px solid #8D9DB2;
+  border: 1px solid #EFEFEF;
   font-size: 15px;
   margin-right: 0px;
   /* margin-left: 50px; */
@@ -114,12 +115,12 @@ input[type='file']{
   display: inline-block;
   padding: 10px 20px;
   /* background-color: #7B7A7A; */
-  color: white; 
+  color: #7B7A7A; 
   /* border-radius: 10px; */
   cursor: pointer;
   height: 40px;
   width: 104%;
-  border: 1px solid #8D9DB2;
+  border: 1px solid #EFEFEF;
   font-size: 15px;
   margin-right: 5px;
   font-weight: bold;
@@ -157,7 +158,7 @@ input[type='file']{
   }
 
   .history-btn{
-    background-color: #8D9DB2;
+    background-color: #EFEFEF;
   }
 
   
