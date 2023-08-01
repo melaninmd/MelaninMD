@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './Prediction.css';
 import { Bar } from "react-chartjs-2";
+import {Card , CardContent, Typography} from "@mui/material"
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -81,8 +82,16 @@ function Prediction() {
     };
     return(
         <>
+        <br />
         {conditionReducer.predictions ? ( <>
-        <img className="image-container" src={conditionReducer.url}/>
+            <Card elevation={4} sx={{ maxWidth: "75%", justifyContent: "center", alignItems: "center", alignContent: "center", paddingLeft: "20px" }}>
+ 
+
+        {/* <img className="image-container" src={conditionReducer.url}/> */}
+            <CardContent sx={{justifyContent: "center", alignItems: "center", alignContent: "center"}}>
+                <img src={conditionReducer.url} />
+            </CardContent>
+        </Card>
         {conditionReducer.predictions?.map((condition, i) => (
                 <div className="data-container">
                     <b className="condition-name">{condition.name}</b>
@@ -98,7 +107,7 @@ function Prediction() {
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={!conditionReducer.predictions}
       >
-        {/* <CircularProgress color="inherit" /> */}
+        <CircularProgress color="inherit" />
       </Backdrop>
       }
         </>
