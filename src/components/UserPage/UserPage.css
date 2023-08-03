@@ -1,7 +1,8 @@
 .mission-container {
     background-color: lavender;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #7B7A7A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699);
 }
 
 p{
@@ -17,8 +18,9 @@ h1{
 
 .usage-container {
     background-color:#7B7A7A;
-    border-radius: 10px;
+    border-radius: 8px;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.711);
 }
 
 b{
