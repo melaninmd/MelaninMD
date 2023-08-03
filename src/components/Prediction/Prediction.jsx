@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './Prediction.css';
 import { Bar } from "react-chartjs-2";
-import {Card , CardContent, Typography} from "@mui/material"
+import {Card , CardContent, Typography, Button} from "@mui/material"
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -96,7 +96,7 @@ function Prediction() {
         {conditionReducer.predictions?.map((condition, i) => (
                 <div className="data-container" key={i}>
                     <b className="condition-name">{condition.name}</b>
-                    <button  className="p-btn" onClick={()=> readMore(condition)}>Read More</button>
+                    <button className="p-btn" onClick={()=> readMore(condition)}>Read More</button>
                     {/* <p>{condition.confidence}</p> */}
                 </div>
         ))}

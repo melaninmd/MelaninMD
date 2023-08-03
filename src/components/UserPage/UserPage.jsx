@@ -1,14 +1,41 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
+import { useEffect, useState } from 'react';
 import './UserPage.css'
+import image from '../Nav/mdLogo 2.png'
 
 function UserPage() {
+  
+  const [loading , setLoading] = useState(true);
+
+  // useEffect( () => {
+  //   const image = new Image();
+  //   image.src = require('../Nav/mdLogo 2.png')
+  // }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
+
+
   return (
-    <div className="container">
+    <div className="container"> 
+    <></>
+    {loading ? (
+      <>
+        <img src={require('../Nav/mdLogo 2.png')} />
+      </>
+
+    ) : (
+    <>
       <div className='mission-container'>
+       
         <h1>Mission</h1>
         <p>MelaninMD provides a transformative and inclusive healthcare experience for all individuals, 
           with a special focus on catering to the diverse spectrum of skin tones, including darker skin tones. 
@@ -32,7 +59,10 @@ function UserPage() {
         <ul>   In the "History" ta  you will see a list of all the previously uploaded images of your skin conditions.</ul>
         <ul>   User can Click on the "Upload" button to add more images to keep track of their condition.</ul>
         <ul>   User can also click  "Delete" button or icon associated with that particular condition to remove it from your history.</ul>
-      </div>
+      </div> 
+     </>
+     ) 
+    }
     </div>
   );
 }
