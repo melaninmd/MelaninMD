@@ -17,7 +17,7 @@ function UserPage() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 4000)
   }, [])
 
   // this component doesn't do much to start, just renders some user reducer info to the DOM
@@ -29,7 +29,7 @@ function UserPage() {
     <></>
     {loading ? (
       <>
-        <img src={require('../Nav/mdLogo 2.png')} />
+        <img  className= "load-logo" src={require('../Nav/mdLogo 2.png')} />
       </>
 
     ) : (
