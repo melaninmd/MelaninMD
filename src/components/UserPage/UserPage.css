@@ -35,3 +35,27 @@ ul{
     padding-right: 15px;
    padding-bottom: 15px;
 }
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes stay-visible {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 1; } 
+}
+
+@keyframes fade-away {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.load-logo {
+    padding-top: 50%;
+    justify-content: center;
+    opacity: 0;
+    animation: fade-in 2s forwards, stay-visible 2s 1s forwards, fade-away 1s 3s forwards;
+}
+
+

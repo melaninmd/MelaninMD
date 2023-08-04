@@ -7,18 +7,6 @@ import image from '../Nav/mdLogo 2.png'
 
 function UserPage() {
   
-  const [loading , setLoading] = useState(true);
-
-  // useEffect( () => {
-  //   const image = new Image();
-  //   image.src = require('../Nav/mdLogo 2.png')
-  // }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 3000)
-  }, [])
 
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
@@ -27,12 +15,7 @@ function UserPage() {
   return (
     <div className="container"> 
     <></>
-    {loading ? (
-      <>
-        <img src={require('../Nav/mdLogo 2.png')} />
-      </>
-
-    ) : (
+    
     <>
       <div className='mission-container'>
        
@@ -61,8 +44,6 @@ function UserPage() {
         <ul>   User can also click  "Delete" button or icon associated with that particular condition to remove it from your history.</ul>
       </div> 
      </>
-     ) 
-    }
     </div>
   );
 }
