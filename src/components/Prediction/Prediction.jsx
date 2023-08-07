@@ -30,28 +30,57 @@ function Prediction() {
     function readMore (condition) {
         window.location.href = condition.readMoreUrl;
 }
+    // const options = {
+    //     scales: {
+    //         y: {        // y axis
+    //             beginAtZero: true,
+    //             title: {
+    //                 display: true,
+    //                 text: "Confidence (%)",
+    //             },
+    //             ticks: {
+    //                 callback: function (value) {
+    //                     return value + "%";
+    //                 },
+    //             },
+    //         },
+    //         x: {    //x axis
+    //             title: {
+    //                 display: true,
+    //                 text: "Predictions",
+    //             },
+    //         },
+    //     },
+    // };
+
     const options = {
         scales: {
-            y: {        // y axis
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    // text: "Confidence (%)",
-                },
-                ticks: {
-                    callback: function (value) {
-                        return value + "%";
-                    },
-                },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+            //   text: "Confidence (%)",
             },
-            x: {    //x axis
-                title: {
-                    display: true,
-                    // text: "Predictions",
-                },
+            ticks: {
+              callback: function (value) {
+                return value + "%";
+              },
             },
+          },
+          x: {
+            title: {
+              display: true,
+            //   text: "Predictions",
+            },
+            ticks: {
+              autoSkip: false,
+              maxRotation: 30,
+              minRotation: 30,
+            },
+          },
         },
-    };
+      };
+    
   // Generate chart data based on conditionReducer
     const generateChartData = () => {
         const labels =
@@ -64,7 +93,7 @@ function Prediction() {
             labels: labels,
             datasets: [
                 {
-                    label: "Bar Chart",
+                    label: "Percentage",
                     data: data,
                     backgroundColor: [
                         "lavender",

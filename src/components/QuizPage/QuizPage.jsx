@@ -88,7 +88,9 @@ function QuizPage() {
                   Recommendation is to include gentle, soothing, and hydrating
                   ingredients that help maintain the skins protective moisture
                   barrier—such as ceramides for example, SkinCeuticals Triple
-                  Lipid Restore, or CeraVe Moisturizing Cream. It is recommended
+                  Lipid Restore, or CeraVe Moisturizing Cream. 
+                  
+                  It is recommended
                   to avoid excessively long, hot showers, moisturizing multiple
                   times per day, and opting for skincare products that are
                   fragrance-free, non-comedogenic, and alcohol-free.
@@ -118,10 +120,13 @@ function QuizPage() {
             overall skin health. Each skin type has unique characteristics and
             needs, and using products and routines tailored to your specific
             type can help address concerns and maintain a healthy complexion.
+
             For example, oily skin may require oil-controlling products to
             prevent breakouts, while dry skin needs hydrating products to retain
             moisture. Using the wrong products for your skin type can lead to
-            issues like irritation, acne, or excessive dryness. Understanding
+            issues like irritation, acne, or excessive dryness. 
+            
+            Understanding
             your skin type empowers you to make informed choices in your
             skincare routine, ensuring that you provide the right care and
             support for your skin's specific requirements.
