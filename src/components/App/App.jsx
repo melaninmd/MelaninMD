@@ -44,13 +44,13 @@ function App() {
           
 
           {/* Visiting localhost:3000/about will show the about page. */}
-          <Route
+          <ProtectedRoute
             // shows AboutPage at all times (logged in or not)
             exact
             path="/quiz"
           >
             <QuizPage />
-          </Route>
+          </ProtectedRoute>
 
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
@@ -100,7 +100,7 @@ function App() {
             }
           </Route>
 
-          <Route
+          <ProtectedRoute
             exact
             path="/home"
           >
@@ -112,13 +112,13 @@ function App() {
               // Otherwise, show the Landing page
               <LandingPage />
             }
-          </Route>
+          </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}
-          <Route
+          <ProtectedRoute
           exact path="/prediction">
             <Prediction/>
-          </Route>
+          </ProtectedRoute>
           <Route>
             <h1>404</h1>
           </Route>

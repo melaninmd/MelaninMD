@@ -93,7 +93,11 @@ function Prediction() {
             labels: labels,
             datasets: [
                 {
-                    label: "Percentage",
+
+               
+
+                    label: "Confidence Level",
+
                     data: data,
                     backgroundColor: [
                         "lavender",
