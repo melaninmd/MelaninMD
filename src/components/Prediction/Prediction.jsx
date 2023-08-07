@@ -64,7 +64,7 @@ function Prediction() {
             labels: labels,
             datasets: [
                 {
-                    label: "Bar Chart",
+                    label: "Confidence Level",
                     data: data,
                     backgroundColor: [
                         "lavender",
